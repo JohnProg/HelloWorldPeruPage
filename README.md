@@ -1,4 +1,0 @@
-helloworldPage
-==============
-
-Page with Laravel
