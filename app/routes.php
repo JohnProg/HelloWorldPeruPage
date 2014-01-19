@@ -11,7 +11,22 @@
 |
 */
 
+Route::get('/home', function()
+{
+	return View::make('home');
+});
+
 Route::get('/', function()
 {
-	return View::make('hello');
+	return View::make('home');
+});
+
+Route::get('/login', function()
+{
+	return View::make('login');
+});
+
+Route::post('/login', function()
+{
+	return View::make('home');
 });
