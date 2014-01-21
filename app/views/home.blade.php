@@ -49,8 +49,8 @@
                 </div>
                 <div class="col-sm-12"> 
                     <p class="text-large section-color-1">
-                        We create beautiful responsive Websites using the latest Web Technologies,<br>
-                        for what ever need you may have.
+                        Nosotros creamos simpaticas responsive Webs usando lo ultimo de tecnologia Web, <br>
+                        que le ayudaran en su negocio o Start Up.
                     </p>
                 </div>
             </div>
@@ -95,10 +95,10 @@
             
                 <div class="col-sm-6 col-lg-3 service-item">
                     <div>
-                        <i class="fa fa-apple"></i>
+                        <i class="fa fa-css3"></i>
                     </div>
                     <div>
-                        <h3 class="section-color-1">iOS</h3>
+                        <h3 class="section-color-1">CSS3</h3>
                         <p class="section-color-1">
                             Sed in luctus lectus, ac commodo velit. Nulla imperdiet ullamcorper augue ac ultricies.
                         </p>
@@ -123,8 +123,8 @@
                 </div>
                 <div class="col-sm-12"> 
                     <p class="text-large section-color-2">
-                        We create beautiful responsive Websites using the latest Web Technologies,<br>
-                        for what ever need you may have.
+                        Nosotros creamos simpaticas responsive Webs usando lo ultimo de tecnologia Web, <br>
+                        que le ayudaran en su negocio o Start Up.
                     </p>
                 </div>
             </div>
@@ -286,8 +286,8 @@
                 </div>
                 <div class="col-sm-12"> 
                     <p class="text-large section-color-1">
-                        We create beautiful responsive Websites using the latest Web Technologies,<br>
-                        for what ever need you may have.
+                        Nosotros creamos simpaticas responsive Webs usando lo ultimo de tecnologia Web, <br>
+                        que le ayudaran en su negocio o Start Up.
                     </p>
                 </div>
             </div>
@@ -413,8 +413,8 @@
                 </div>
                 <div class="col-sm-12"> 
                     <p class="text-large section-color-1">
-                        We create beautiful responsive Websites using the latest Web Technologies,<br>
-                        for what ever need you may have.
+                        Nosotros creamos simpaticas responsive Webs usando lo ultimo de tecnologia Web, <br>
+                        que le ayudaran en su negocio o Start Up.
                     </p>
                 </div>
             </div>
