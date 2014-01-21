@@ -82,7 +82,7 @@
                         <ul class="social list-inline">
                             <li>
                                 <div>
-                                    <a href="#" class="facebook">
+                                    <a href="https://www.facebook.com/helloworldperu" class="facebook">
                                         <i class="fa fa-facebook"></i>
                                     </a>
                                 </div>
@@ -96,15 +96,8 @@
                             </li>
                             <li>
                                 <div>
-                                    <a href="#" class="dribbble">
-                                        <i class="fa fa-dribbble"></i>
-                                    </a>
-                                </div>
-                            </li>
-                            <li>
-                                <div>
-                                    <a href="#" class="vimeo">
-                                        <i class="fa fa-vimeo-square"></i>
+                                    <a href="https://github.com/HelloWorldPeru" class="vimeo">
+                                        <i class="fa fa-github"></i>
                                     </a>
                                 </div>
                             </li> 
@@ -124,7 +117,7 @@
                             </li> 
                             <li>
                                 <div>
-                                    <a href="#" class="youtube">
+                                    <a href="https://www.youtube.com/user/HelloworldPeru" class="youtube">
                                         <i class="fa fa-youtube"></i>
                                     </a>
                                 </div>

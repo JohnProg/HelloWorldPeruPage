@@ -298,21 +298,23 @@
                     <div class="team-member">
                         <div class="header">
                             <span class="name">John Paul</span>
-                            <span class="position">Developer</span>
+                            <span class="position">Designer / Developer</span>
                         </div>
                         <div class="content">
                             <div class="info">
-                                <p>I am a graduate from the University of Florida where I received a Bachelors in Computer Science.</p>
-                                <p>Sed in luctus lectus, ac commodo velit. Nulla imperdiet ullamcorper augue ac ultricies.</p>
+                                <p>Estudiante del 7 ciclo de la carrera Ingenieria de Sistemas en la Universidad Autonoma del Peru.</p>
+                                <p>Amante de python y javascript, asi como css3, html5 y php.</p>
+                                <p>Me encanta codear, enseñar y estar aprendiendo constantemente de las nuevas tecnoligias!</p>                                
                             </div>
                             <img src="img/team-1.jpg" alt="">
                         </div>
                         <div class="footer">
                             <ul>
-                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-                                <li><a href="#"><i class="fa fa-envelope"></i></a></li> 
+                                <li><a href="https://www.facebook.com/john.machahuaygiraldo.3"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="https://twitter.com/Johnp_js"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="https://github.com/JohnProg"><i class="fa fa-github"></i></a></li>
+                                <li><a href="https://www.youtube.com/user/TecTimeJohnProg"><i class="fa fa-youtube"></i></a></li> 
+                                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
                             </ul>
                         </div>
                     </div>
@@ -326,16 +328,17 @@
                         </div>
                         <div class="content">
                             <div class="info">
-                                <p>I am a graduate from the University of Florida where I received a Bachelors in Graphics and Web Design.</p>
+                                <p>Estudiante del 7 ciclo de la carrera Ingenieria de Sistemas en la Universidad Autonoma del Peru.</p>
+                                <p>Amante de python y Dota!! me gusta codear y estar aprendiendo nuevas cosas.</p>                                
                             </div>
                             <img src="img/team-2.jpg" alt="">
                         </div>
                         <div class="footer">
                             <ul>
-                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="https://www.facebook.com/jcg4rcia"><i class="fa fa-facebook"></i></a></li>
                                 <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-                                <li><a href="#"><i class="fa fa-envelope"></i></a></li>  
+                                <li><a href="https://github.com/jonathancg90"><i class="fa fa-github"></i></a></li>
+                                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>  
                             </ul>
                         </div>
                     </div>
@@ -349,17 +352,19 @@
                         </div>
                         <div class="content">
                             <div class="info">
-                                <p>I am a graduate from the University of Florida where I received a Bachelors in Multimedia.</p>
-                                <p>Sed in luctus lectus, ac commodo velit. Nulla imperdiet ullamcorper augue ac ultricies.</p>
+                                <p>Estudiante del 7 ciclo de la carrera Ingenieria de Sistemas en la Universidad Autonoma del Peru.</p>
+                                <p>Amante de los diseños, dibujos y tecnologias como fireworks, corel Draw, photoshop, illutrator.</p>
+                                <p>En tiempos libre, administro mi blog y subo algunas imagenes que hago.</p>
+                                <p><a href="http://youcreativity.blogspot.com">Ir a mi blog!!</a></p>
                             </div>
                             <img src="img/team-3.jpg" alt="">
                         </div>
                         <div class="footer">
                             <ul>
-                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="https://www.facebook.com/ckt.karo?fref=ts"><i class="fa fa-facebook"></i></a></li>
                                 <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-                                <li><a href="#"><i class="fa fa-envelope"></i></a></li>  
+                                <li><a href="http://youcreativity.blogspot.com/"><i class="fa fa-envelope"></i></a></li>
+                                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
                             </ul>
                         </div>
                     </div>
@@ -373,16 +378,18 @@
                         </div>
                         <div class="content">
                             <div class="info">
-                                <p>I am a graduate from the University of Florida where I received a Bachelors in Computer Science and Multimedia.</p>
+                                <p>Estudiante del 7 ciclo de la carrera Ingenieria de Sistemas en la Universidad Autonoma del Peru.</p>
+                                <p>Amante de python, java y javascript.</p>
+                                <p>Me encanta jugar pokemon y veo videos de estrategia en youtube!</p>
                             </div>
                             <img src="img/team-4.jpg" alt="">
                         </div>
                         <div class="footer">
                             <ul>
-                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="https://www.facebook.com/gustavo.pajuelopardo?fref=ts"><i class="fa fa-facebook"></i></a></li>
                                 <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-                                <li><a href="#"><i class="fa fa-envelope"></i></a></li> 
+                                <li><a href="https://github.com/gustavopp93"><i class="fa fa-github"></i></a></li>
+                                <li><a href="#"><i class="fa fa-google-plus"></i></a></li> 
                             </ul>
                         </div>
                     </div>
