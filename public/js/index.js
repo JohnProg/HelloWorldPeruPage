@@ -5,7 +5,7 @@ function init(){
 	$('#gallery').mixitup();
 
 	/* Starting Animation on Load */
-	$('<img/>').attr('src', 'img/header-bg.jpg').load(function() {	    
+	$('<img/>').attr('src', 'img/header-bg.png').load(function() {
 	  $('#navbar > ul > li').fadeIn(1200, function() {
 	    $(this).animate({opacity: '1'});
 	    $('.navbar-nav>li a ').css({'-webkit-transform': 'rotateX(0deg)'});
