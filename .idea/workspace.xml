@@ -64,15 +64,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="paths.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bootstrap/paths.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="51" column="5" selection-start="1707" selection-end="1707" vertical-scroll-proportion="0.0" vertical-offset="765" max-vertical-offset="945">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="base.blade.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/layouts/base.blade.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -118,10 +109,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name=".htaccess" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name=".htaccess" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public_html/.htaccess">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="8" selection-start="66" selection-end="66" vertical-scroll-proportion="0.04754358" vertical-offset="0" max-vertical-offset="631">
+            <state line="2" column="8" selection-start="66" selection-end="66" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="300">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="6" column="5" selection-start="85" selection-end="85" vertical-scroll-proportion="0.14263074" vertical-offset="0" max-vertical-offset="631">
               <folding />
             </state>
           </provider>
@@ -175,6 +175,7 @@
         <option value="$PROJECT_DIR$/public_html/bootstrap/autoload.php" />
         <option value="$PROJECT_DIR$/public_html/bootstrap/start.php" />
         <option value="$PROJECT_DIR$/public_html/.htaccess" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -679,12 +680,12 @@
       <workItem from="1390281546535" duration="91000" />
       <workItem from="1390281753794" duration="504000" />
       <workItem from="1390352996278" duration="5693000" />
-      <workItem from="1390396092125" duration="260000" />
+      <workItem from="1390396092125" duration="327000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8784000" />
+    <option name="totallyTimeSpent" value="8851000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1280" height="774" extended-state="6" />
@@ -708,7 +709,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24959612" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24959612" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -949,7 +950,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public_html/.htaccess">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="8" selection-start="66" selection-end="66" vertical-scroll-proportion="0.04754358" vertical-offset="0" max-vertical-offset="631">
+        <state line="2" column="8" selection-start="66" selection-end="66" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="300">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="5" selection-start="85" selection-end="85" vertical-scroll-proportion="0.14263074" vertical-offset="0" max-vertical-offset="631">
           <folding />
         </state>
       </provider>
