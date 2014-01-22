@@ -94,7 +94,7 @@
       <file leaf-file-name="index.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public_html/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="7.125" vertical-offset="171" max-vertical-offset="750">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.33333334" vertical-offset="8" max-vertical-offset="750">
               <folding />
             </state>
           </provider>
@@ -112,10 +112,8 @@
       <file leaf-file-name=".htaccess" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public_html/.htaccess">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="2" selection-start="2" selection-end="2" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="406">
-              <folding>
-                <marker date="1390369249000" expanded="true" signature="2:144" placeholder="&lt;IfModule mod_rewrite.c&gt;" />
-              </folding>
+            <state line="6" column="11" selection-start="141" selection-end="142" vertical-scroll-proportion="0.22167487" vertical-offset="0" max-vertical-offset="406">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -710,12 +708,12 @@
       <workItem from="1390280893993" duration="186000" />
       <workItem from="1390281546535" duration="91000" />
       <workItem from="1390281753794" duration="504000" />
-      <workItem from="1390352996278" duration="4561000" />
+      <workItem from="1390352996278" duration="4878000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7392000" />
+    <option name="totallyTimeSpent" value="7709000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1280" height="774" extended-state="6" />
@@ -864,20 +862,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="33" selection-start="123" selection-end="123" vertical-scroll-proportion="-3.75" vertical-offset="0" max-vertical-offset="375">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public_html/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="7.125" vertical-offset="171" max-vertical-offset="750">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bootstrap/start.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="18.375" vertical-offset="441" max-vertical-offset="1035">
@@ -899,12 +883,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/server.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="33" selection-start="123" selection-end="123" vertical-scroll-proportion="-3.75" vertical-offset="0" max-vertical-offset="375">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public_html/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.33333334" vertical-offset="8" max-vertical-offset="750">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/public_html/.htaccess">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="2" selection-start="2" selection-end="2" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="406">
-          <folding>
-            <marker date="1390369249000" expanded="true" signature="2:144" placeholder="&lt;IfModule mod_rewrite.c&gt;" />
-          </folding>
+        <state line="6" column="11" selection-start="141" selection-end="142" vertical-scroll-proportion="0.22167487" vertical-offset="0" max-vertical-offset="406">
+          <folding />
         </state>
       </provider>
     </entry>
