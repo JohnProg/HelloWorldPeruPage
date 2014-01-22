@@ -17,16 +17,18 @@ function init(){
 
 	$('.text-menu').hide();
 
-	$('.button-option').on('click',function(event){                    
+	$('.button-option').on('click',function(event){   
+	debugger;                 
 	    event.preventDefault();
 	    if ($('#toque_main_content').hasClass("see_info") ) {
-	        $("#toque_main_content").stop().animate({width:"50px"}, 500);          
+	        //$("#toque_main_content").stop().animate({width:50}, 500);          
 	        $('#toque_main_content').removeClass("see_info");
 	        $('.text-menu').hide();
 	    } else {
-	        $("#toque_main_content").stop().animate({width:"140px"}, 500);   
-	        $('#toque_main_content').addClass("see_info");
-	        $('.text-menu').stop().delay(500).fadeIn();
+	        //$("#toque_main_content").stop().animate({width:140}, 500);   
+	        $('.text-menu').stop().delay(300).fadeIn();
+	        $('#toque_main_content').stop().delay(500).addClass("see_info");
+	        
 	    }
 	});    
 

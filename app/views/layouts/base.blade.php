@@ -81,11 +81,13 @@
                     <div class="col-sm-12">
                         <ul class="social list-inline">
                             <li>
+
                                 <div>
-                                    <a href="#" class="facebook">
+                                    <a href="https://www.facebook.com/helloworldperu" class="facebook">
                                         <i class="fa fa-facebook"></i>
                                     </a>
                                 </div>
+                                <div class="fb-like" data-href="https://www.facebook.com/helloworldperu?fref=ts" data-layout="box_count" data-action="like" data-show-faces="true" data-share="false"></div>
                             </li>
                             <li>
                                 <div>
@@ -96,15 +98,8 @@
                             </li>
                             <li>
                                 <div>
-                                    <a href="#" class="dribbble">
-                                        <i class="fa fa-dribbble"></i>
-                                    </a>
-                                </div>
-                            </li>
-                            <li>
-                                <div>
-                                    <a href="#" class="vimeo">
-                                        <i class="fa fa-vimeo-square"></i>
+                                    <a href="https://github.com/HelloWorldPeru" class="vimeo">
+                                        <i class="fa fa-github"></i>
                                     </a>
                                 </div>
                             </li> 
@@ -124,7 +119,7 @@
                             </li> 
                             <li>
                                 <div>
-                                    <a href="#" class="youtube">
+                                    <a href="https://www.youtube.com/user/HelloworldPeru" class="youtube">
                                         <i class="fa fa-youtube"></i>
                                     </a>
                                 </div>
@@ -164,5 +159,18 @@
         <!-- Scripts Section -->
         @yield('script')
         <!-- End Scripts Section -->
-    </body>
-</html>
+        
+    
+    
+ </body>
+<div id="fb-root"></div>
+<script>
+    (function(d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) return;
+          js = d.createElement(s); js.id = id;
+          js.src = "//connect.facebook.net/es_LA/all.js#xfbml=1";
+          fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+</script>
+ </html>
