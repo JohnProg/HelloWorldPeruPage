@@ -2,31 +2,31 @@
 
 /*
 |--------------------------------------------------------------------------
-| Application Routes
+| Public
 |--------------------------------------------------------------------------
-|
-| Here is where you can register all of the routes for an application.
-| It's a breeze. Simply tell Laravel the URIs it should respond to
-| and give it the Closure to execute when that URI is requested.
-|
+*/
+$optionsFront = array();
+Route::group($optionsFront, function()
+{
+    Route::get('/', function()
+    {
+        return View::make('home');
+    });
+
+    Route::post('/login', function()
+    {
+        return View::make('home');
+    });
+});
+
+/*
+|--------------------------------------------------------------------------
+| Dashboard
+|--------------------------------------------------------------------------
 */
 
-Route::get('/home', function()
+$optionsBack = array();
+Route::group($optionsBack, function()
 {
-	return View::make('home');
-});
 
-Route::get('/', function()
-{
-	return View::make('home');
-});
-
-Route::get('/login', function()
-{
-	return View::make('login');
-});
-
-Route::post('/login', function()
-{
-	return View::make('home');
 });

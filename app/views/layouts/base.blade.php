@@ -5,7 +5,7 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
         
-		<title>Achieve | Portfolio Template</title>
+		<title>Hello World Peru</title>
 		<meta name="description" content="">
 		<meta name="keywords" content="">
 		<link rel="shortcut icon" href="img/favicon.ico">
@@ -45,10 +45,10 @@
             <div class="collapse navbar-collapse" id="navbar">
                 <ul class="nav navbar-nav">
                     <li>
-                        <a href="#services">SERVICES</a>
+                        <a href="#services">SERVICIOS</a>
                     </li>
                     <li>
-                        <a href="#portfolio">PORTFOLIO</a>
+                        <a href="#portfolio">PORTAFOLIO</a>
                     </li>
                     <li class="home">
                         <a href="#home">
@@ -58,10 +58,10 @@
                         </a>
                     </li>
                     <li>
-                        <a href="#about">ABOUT</a>
+                        <a href="#about">CONOCENOS</a>
                     </li>    
                     <li>
-                        <a href="#contact">CONTACT</a>
+                        <a href="#contact">CONTACTANOS</a>
                     </li> 
                 </ul>
             </div>

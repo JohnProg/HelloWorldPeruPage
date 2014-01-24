@@ -45,12 +45,12 @@
             
             <div class="row text-center"> 
                 <div class="col-sm-12"> 
-                    <h1 class="heading-large section-color-1">SERVICES</h1>
+                    <h1 class="heading-large section-color-1">SERVICIOS</h1>
                 </div>
                 <div class="col-sm-12"> 
                     <p class="text-large section-color-1">
-                        Nosotros creamos simpaticas responsive Webs usando lo ultimo de tecnologia Web, <br>
-                        que le ayudaran en su negocio o Start Up.
+                        Tienes alguna idea en mente, quieres generar un valor agregado a tu negocio <br>
+                        o quiza mejorarlo, te ofrecemos estas soluciones
                     </p>
                 </div>
             </div>
@@ -62,9 +62,9 @@
                         <i class="fa fa-html5"></i>
                     </div>
                     <div>
-                        <h3 class="section-color-1">HTML5</h3>
+                        <h3 class="section-color-1">WEB</h3>
                         <p class="section-color-1">
-                            Sed in luctus lectus, ac commodo velit. Nulla imperdiet ullamcorper augue ac ultricies.
+                            Paginas Web de contenido, Páginas Web Transaccionales, Comunidades, Foros, Sistemas personalizables.
                         </p>
                     </div>
                 </div>
@@ -74,9 +74,9 @@
                         <i class="fa fa-code"></i>
                     </div>
                     <div>
-                        <h3 class="section-color-1">CODE</h3>
+                        <h3 class="section-color-1">SOPORTE</h3>
                         <p class="section-color-1">
-                            Sed in luctus lectus, ac commodo velit. Nulla imperdiet ullamcorper augue ac ultricies.
+                            Brindamos tutorias de alguna tecnologia que desearia conocer.
                         </p>
                     </div>
                 </div>
@@ -86,9 +86,9 @@
                         <i class="fa fa-android"></i>
                     </div>
                     <div>
-                        <h3 class="section-color-1">ANDROID</h3>
+                        <h3 class="section-color-1">MOBILE</h3>
                         <p class="section-color-1">
-                            Sed in luctus lectus, ac commodo velit. Nulla imperdiet ullamcorper augue ac ultricies.
+                            Aplicaciones de apoyo en su negocio o idea.
                         </p>
                     </div>
                 </div>
@@ -98,9 +98,9 @@
                         <i class="fa fa-css3"></i>
                     </div>
                     <div>
-                        <h3 class="section-color-1">CSS3</h3>
+                        <h3 class="section-color-1">DISEÑO</h3>
                         <p class="section-color-1">
-                            Sed in luctus lectus, ac commodo velit. Nulla imperdiet ullamcorper augue ac ultricies.
+                            Creacion de logos, retoques fotograficos, creacion de banner.
                         </p>
                     </div>
                 </div>
@@ -119,12 +119,12 @@
             
             <div class="row text-center"> 
                 <div class="col-sm-12"> 
-                    <h1 class="heading-large section-color-2">PORTFOLIO</h1>
+                    <h1 class="heading-large section-color-2">PORTAFOLIO</h1>
                 </div>
                 <div class="col-sm-12"> 
                     <p class="text-large section-color-2">
-                        Nosotros creamos simpaticas responsive Webs usando lo ultimo de tecnologia Web, <br>
-                        que le ayudaran en su negocio o Start Up.
+                        Contamos con proyectos ya desarrollados en la que usted podra ver , <br>
+                        porbar y evaluar nuestro trabajo.
                     </p>
                 </div>
             </div>
@@ -282,12 +282,12 @@
             
             <div class="row text-center"> 
                 <div class="col-sm-12"> 
-                    <h1 class="heading-large section-color-1">ABOUT US</h1>
+                    <h1 class="heading-large section-color-1">CONOCENOS</h1>
                 </div>
                 <div class="col-sm-12"> 
                     <p class="text-large section-color-1">
-                        Nosotros creamos simpaticas responsive Webs usando lo ultimo de tecnologia Web, <br>
-                        que le ayudaran en su negocio o Start Up.
+                        Somos un equipo que nos apasiona lo que realizamos, motivado por el aprendizaje constante, las nuevas tecnologias<br>
+                        y las nuevas tendencias.
                     </p>
                 </div>
             </div>
@@ -298,7 +298,7 @@
                     <div class="team-member">
                         <div class="header">
                             <span class="name">John Paul</span>
-                            <span class="position">Designer / Developer</span>
+                            <span class="position">Web Designer</span>
                         </div>
                         <div class="content">
                             <div class="info">
@@ -348,7 +348,7 @@
                     <div class="team-member">
                         <div class="header">
                             <span class="name">Diana Karolina</span>
-                            <span class="position">Designer</span>
+                            <span class="position">Creative designer</span>
                         </div>
                         <div class="content">
                             <div class="info">
@@ -408,13 +408,13 @@
         <div class="overlay-contact"></div>
         <div class="container">
             <div class="row text-center"> 
-                <div class="col-sm-12"> 
-                    <h1 class="heading-large section-color-1">CONTACT US</h1>
+                <div class="col-sm-12">
+                    <h1 class="heading-large section-color-1">CONTACTANOS</h1>
                 </div>
                 <div class="col-sm-12"> 
                     <p class="text-large section-color-1">
-                        Nosotros creamos simpaticas responsive Webs usando lo ultimo de tecnologia Web, <br>
-                        que le ayudaran en su negocio o Start Up.
+                        ¿ Tienes alguna duda ? ¿ quieres saber mas de nosotros ? o ¿ tienes alguna propuesta ?  <br>
+                        escribenos y le responderemos en el menor tiempo posible.
                     </p>
                 </div>
             </div>
@@ -428,17 +428,17 @@
                             <div class="row">
                                 <div class="span6">
                                     <div class="field your-name">
-                                        <input type="text" name="your-name" placeholder="Your Name" class="cform-text" size="40" data-rule="maxlen:4" data-msg="Please enter at least 4 chars">
+                                        <input type="text" name="your-name" placeholder="¿ Como te llamas ?" class="cform-text" size="40" data-rule="maxlen:4" data-msg="Please enter at least 4 chars">
                                         <div class="validation">
                                         </div>
                                     </div>
                                     <div class="field your-email">
-                                        <input type="text" name="your-email" placeholder="Your Email" class="cform-text" size="40" data-rule="email" data-msg="Please enter a valid email">
+                                        <input type="text" name="your-email" placeholder="¿ Cual es tu correo ?" class="cform-text" size="40" data-rule="email" data-msg="Please enter a valid email">
                                         <div class="validation">
                                         </div>
                                     </div>
                                     <div class="field subject">
-                                        <input type="text" name="subject" placeholder="Subject" class="cform-text" size="40" data-rule="maxlen:4" data-msg="Please enter at least 8 chars of subject">
+                                        <input type="text" name="subject" placeholder="¿ de que trata tu mensaje ?" class="cform-text" size="40" data-rule="maxlen:4" data-msg="Please enter at least 8 chars of subject">
                                         <div class="validation">
                                         </div>
                                     </div>
@@ -449,7 +449,7 @@
                                         <div class="validation">
                                         </div>
                                     </div>
-                                    <input type="submit" value="Send message" class="btn btn-theme pull-left">
+                                    <input type="submit" value="Enviar" class="btn btn-theme pull-left">
                                 </div>
                             </div>
                         </form>
