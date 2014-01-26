@@ -422,36 +422,32 @@
                         <div id="sendmessage">
                              Your message has been sent. Thank you!
                         </div>
-
-                        <form action="" method="post" class="contactForm">
+                        {{ Form::open(array('url' => 'contact', 'method' => 'post')) }}
+                            {{ Form::token() }}
                             <div class="row">
                                 <div class="span6">
                                     <div class="field your-name">
-                                        <input type="text" name="your-name" placeholder="¿ Como te llamas ?" class="cform-text" size="40" data-rule="maxlen:4" data-msg="Please enter at least 4 chars">
-                                        <div class="validation">
+                                        {{ Form::text('name', '', array('class'=>'cform-text', 'placeholder'=>'¿ Como te llamas ?')) }}                                        <div class="validation">
                                         </div>
                                     </div>
                                     <div class="field your-email">
-                                        <input type="text" name="your-email" placeholder="¿ Cual es tu correo ?" class="cform-text" size="40" data-rule="email" data-msg="Please enter a valid email">
-                                        <div class="validation">
+                                        {{ Form::text('email', '', array('class'=>'cform-text', 'placeholder'=>'¿ Cual es tu correo ?')) }}                                        <div class="validation">
                                         </div>
                                     </div>
                                     <div class="field subject">
-                                        <input type="text" name="subject" placeholder="¿ de que trata tu mensaje ?" class="cform-text" size="40" data-rule="maxlen:4" data-msg="Please enter at least 8 chars of subject">
-                                        <div class="validation">
+                                        {{ Form::text('subject', '', array('class'=>'cform-text', 'placeholder'=>'¿ de que trata tu mensaje ?')) }}                                        <div class="validation">
                                         </div>
                                     </div>
                                 </div>
                                 <div class="span6">
                                     <div class="field message">
-                                        <textarea name="message" class="cform-textarea" cols="40" rows="10" data-rule="required" data-msg="Please write something for us"></textarea>
-                                        <div class="validation">
+                                        {{ Form::textarea('message', '', array('class'=>'cform-textarea', 'placeholder'=>'Mensaje', 'cols'=>'40', 'rows'=>'10' )) }}                                        <div class="validation">
                                         </div>
                                     </div>
-                                    <input type="submit" value="Enviar" class="btn btn-theme pull-left">
+                                    {{ Form::submit('Enviar', array('class'=>'btn btn-theme pull-left')); }}
                                 </div>
                             </div>
-                        </form>
+                        {{ Form::close() }}
                     </div>
                 </div>
                 <!-- ./span12 -->

@@ -1,18 +1,27 @@
 <?php
-use Input;
-use Redirect;
 
 class ContactController extends BaseController {
 
     public function contactCreate()
     {
-        //Obtener parametros
         $input = Input::all();
-        //registrar en BD
+        $comment = new Comment;
+        $comment->email = $input->email;
+        $comment->subject = $input->subject;
+        $comment->message = $input->message;
 
-        //Enviar correo
+        $comment->save();
 
         return Redirect::route('home');
+    }
+
+    public function contactList(){
+        $list = Comment::all();
+        //$list = Comment::where('status','=',1)->get();
+    }
+
+    public function contactStatusRedirect(){
+
     }
 
 }

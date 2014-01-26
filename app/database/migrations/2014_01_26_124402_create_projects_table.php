@@ -21,6 +21,7 @@ class CreateProjectsTable extends Migration {
             $table->string('url');
 			$table->timestamps();
 		});
+
 	}
 
 	/**
