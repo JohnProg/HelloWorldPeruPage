@@ -24,23 +24,21 @@
 	</head>
     
 	<body>
-        
-        <!-- Overlay Section -->
-        <div class="overlay"></div>
+
         <!-- End Overlay Section -->
 
         <!-- Navigation Section -->
         <nav class="navbar" role="navigation">
-            
+
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
                     <span class="sr-only">Toggle navigation</span>
-                    <span class="fa fa-bars"></span> 
+                    <span class="fa fa-bars"></span>
                 </button>
                 <a class="navbar-brand" href="#">HelloWorldPerú</a>
             </div>
-            
+
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="navbar">
                 <ul class="nav navbar-nav">
@@ -54,15 +52,15 @@
                         <a href="#home">
                             <!--<img src="img/logo-no-text.png" alt="Home" width="128" height="128">-->
                             <br>
-                            HelloWorldPerú                  
+                            HelloWorldPerú
                         </a>
                     </li>
                     <li>
                         <a href="#about">CONOCENOS</a>
-                    </li>    
+                    </li>
                     <li>
                         <a href="#contact">CONTACTANOS</a>
-                    </li> 
+                    </li>
                 </ul>
             </div>
 
