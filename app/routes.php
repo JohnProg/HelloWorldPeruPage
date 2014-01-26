@@ -8,14 +8,13 @@
 $optionsFront = array();
 Route::group($optionsFront, function()
 {
-    Route::get('/', function()
-    {
-        return View::make('home');
-    });
 
-    Route::post('/login', function()
-    {
-        return View::make('home');
+    Route::get('/', array('as'=>'home', 'uses'=>'HomeController@getIndex'));
+    Route::post('contact', 'HomeController@contactCreate');
+
+
+    Route::get('/prueba/{id}/{nombre?}', function($id, $nombre){
+        return 'User: '.$id.' su nombre es: '.$nombre;
     });
 });
 

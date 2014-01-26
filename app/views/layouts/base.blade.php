@@ -50,9 +50,7 @@
                     </li>
                     <li class="home">
                         <a href="#home">
-                            <!--<img src="img/logo-no-text.png" alt="Home" width="128" height="128">-->
-                            <br>
-                            HelloWorldPerú
+                            <img src="img/logo.png" alt="Home" width="128" height="60">
                         </a>
                     </li>
                     <li>

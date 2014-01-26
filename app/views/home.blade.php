@@ -25,10 +25,7 @@
         <div class="container">
             <div class="row text-center">
                 <div class="col-sm-12">
-                    <div class="visible-xs">
-                        <!--<img src="img/logo(1).png" class="logo" alt="Home" width="192" height="192">-->
-                        Logo
-                    </div>
+                        <h2 style="font-family: fantasy;">Hello World Peru</h2>
                 </div>
                 <div class="col-sm-12">
                     <p class="text-extra-large">Somos un equipo freelance de desarrollo ágil, enfocados en la creación<br class="uk-hidden-small">  de aplicaciones web & movile que le ayudaran en su negocio.
@@ -425,6 +422,9 @@
                         <div id="sendmessage">
                              Your message has been sent. Thank you!
                         </div>
+                        {{ Form::open(array('url' => 'contact/bar')) }}
+
+                        {{ Form::close() }}
                         <form action="" method="post" class="contactForm">
                             <div class="row">
                                 <div class="span6">
