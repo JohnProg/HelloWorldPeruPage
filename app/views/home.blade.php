@@ -298,7 +298,7 @@
                     <div class="team-member">
                         <div class="header">
                             <span class="name">John Paul</span>
-                            <span class="position">Web Designer</span>
+                            <span class="position">Web Designer/Developer</span>
                         </div>
                         <div class="content">
                             <div class="info">
