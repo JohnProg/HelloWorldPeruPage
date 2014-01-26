@@ -14,6 +14,14 @@ class HomeController extends BaseController {
 	|	Route::get('/', 'HomeController@showWelcome');
 	|
 	*/
+	public function getIndex()
+    {
+        return View::make('home');
+    }
+    
+	public function showLogin(){
+		return View::make('auth/login');
+	}
 
 	public function doLogin()
 	{
@@ -33,26 +41,18 @@ class HomeController extends BaseController {
 				return Response::json($data); 
 			} else {
 
-				// create our user data for the authentication
 				$userdata = array(
 					'email' 	=> Input::get('email'),
 					'password' 	=> Input::get('password')
 				);
 
-				// attempt to do the login
-				if (Auth::attempt($userdata)) {
-
-					// validation successful!
-					// redirect them to the secure section or whatever
-					// return Redirect::to('secure');
-					// for now we'll just echo success (even though echoing in a controller is bad)					
+				if (Auth::attempt($userdata)) {					
 					$data = array('status'=>true,'msg'=>'Bienvenido!');
 					return Response::json($data);
 
 				} else {	 	
 					$data = array('status'=>false,'msg'=>'Datos incorrectos!');
 					return Response::json($data);
-					// return 'bad';
 
 				}
 
@@ -65,6 +65,10 @@ class HomeController extends BaseController {
 	{
 		Auth::logout();
 		return Redirect::to('/blog')->with('msg','Gracias por su visita!');
+	}
+	
+	public function showRegister(){
+		return View::make('auth/register');
 	}
 
 	public function doRegister()

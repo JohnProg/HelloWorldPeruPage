@@ -8,26 +8,26 @@
 $optionsFront = array();
 Route::group($optionsFront, function()
 {
-
 	Route::get('blog', 'blogController@showAllArticles');    
 	Route::get('blog/{id}', 'blogController@showOneArticle');
     
-    Route::get('/', function()
-    {
-        return View::make('home');
-    });
 
-    Route::get('login', function(){
-        return View::make('auth/login');
-    });
+    Route::get('login',array('as'=>'login', 'uses'=>'@HomeController@showLogin'));
     Route::post('login', 'HomeController@doLogin');
     Route::get('logout', 'HomeController@doLogout');
 
 
-    Route::get('/register', function(){
-        return View::make('auth/register');
-    });   
+    Route::get('/register', array('as'=>'register', 'uses'=>'@HomeController@showRegister'));   
     Route::post('/register', 'HomeController@doRegister');
+    
+
+    Route::get('/', array('as'=>'home', 'uses'=>'HomeController@getIndex'));
+    Route::get('/test', array('as'=>'test', 'uses'=>'ContactController@getList'));
+    Route::post('contact', 'ContactController@postContactCreate');
+
+//    Route::get('/prueba/{id}/{nombre?}/', function($id, $nombre='aaa'){
+//        return 'User: '.$id.' su nombre es: '.$nombre;
+//    });
 });
 
 /*

@@ -1,41 +1,39 @@
 @extends('layouts.base')
 
 @section('contenido')
-	<!-- Sidebar Section --> 
-    <aside>
 
-        <nav id="toque_main_content" style="width: 50px;">
-          <span class="button-option"><i class="fa fa-align-justify"></i></span>
-          <ul>
+<!-- Sidebar Section -->
+<aside>
+
+    <nav id="toque_main_content" style="width: 50px;">
+        <span class="button-option"><i class="fa fa-align-justify"></i></span>
+        <ul>
             <li><a class='menu' href="#" id="home"><i class="fa fa-home"></i> <span class="text-menu">HOME</span></a></li>
-             <li><a class='menu' href="#services"><i class="fa fa-money"></i> <span class="text-menu">SERVICES</span></a></li>
-             <li><a class='menu' href="#portfolio"><i class="fa fa-briefcase"></i> <span class="text-menu">PORTFOLIO</span></a></li>
-            <li><a class='menu' href="#about"><i class="fa fa-user"></i> <span class="text-menu">ABOUT</span></a></li>            
-            <li><a class='menu' href="#contact"><i class="fa fa-envelope"></i> <span class="text-menu">CONTACT</span></a></li>              
-          </ul>
-        </nav>
+            <li><a class='menu' href="#services"><i class="fa fa-money"></i> <span class="text-menu">SERVICES</span></a></li>
+            <li><a class='menu' href="#portfolio"><i class="fa fa-briefcase"></i> <span class="text-menu">PORTFOLIO</span></a></li>
+            <li><a class='menu' href="#about"><i class="fa fa-user"></i> <span class="text-menu">ABOUT</span></a></li>
+            <li><a class='menu' href="#contact"><i class="fa fa-envelope"></i> <span class="text-menu">CONTACT</span></a></li>
+        </ul>
+    </nav>
 
-    </aside>
-    <!-- End Sidebar Section -->
-    
+</aside>
+<!-- End Sidebar Section -->
+
     <!-- Home Section -->
     <section id="home">
-    
+
         <div class="container">
             <div class="row text-center">
                 <div class="col-sm-12">
-                    <div class="visible-xs">
-                        <!--<img src="img/logo(1).png" class="logo" alt="Home" width="192" height="192">-->
-                        Logo
-                    </div>
+                        <h2 style="font-family: fantasy;">Hello World Peru</h2>
                 </div>
                 <div class="col-sm-12">
                     <p class="text-extra-large">Somos un equipo freelance de desarrollo ágil, enfocados en la creación<br class="uk-hidden-small">  de aplicaciones web & movile que le ayudaran en su negocio.
                     </p>
                 </div>
             </div>
-        </div> 
-    
+        </div>
+
     </section>
     <!-- Home Section -->
     
@@ -108,7 +106,7 @@
             </div>
             
         </div>
-        
+
     </section>
     <!-- End Services Section -->
     
@@ -424,35 +422,36 @@
                         <div id="sendmessage">
                              Your message has been sent. Thank you!
                         </div>
-                        <form action="" method="post" class="contactForm">
+                        {{ Form::open(array('url' => 'contact', 'method' => 'post')) }}
+                            {{ Form::token() }}
                             <div class="row">
                                 <div class="span6">
                                     <div class="field your-name">
-                                        <input type="text" name="your-name" placeholder="¿ Como te llamas ?" class="cform-text" size="40" data-rule="maxlen:4" data-msg="Please enter at least 4 chars">
-                                        <div class="validation">
+                                        {{ Form::text('name', Input::old('name'), array('class'=>'cform-text', 'placeholder'=>'¿ Como te llamas ?')) }}                                        <div class="validation">
+                                        {{ $errors->first('name', '<span class="text-error">:message</span>') }}
                                         </div>
                                     </div>
                                     <div class="field your-email">
-                                        <input type="text" name="your-email" placeholder="¿ Cual es tu correo ?" class="cform-text" size="40" data-rule="email" data-msg="Please enter a valid email">
-                                        <div class="validation">
+                                        {{ Form::text('email', Input::old('email'), array('class'=>'cform-text', 'placeholder'=>'¿ Cual es tu correo ?')) }}                                        <div class="validation">
+                                        {{ $errors->first('email', '<span class="text-error">:message</span>') }}
                                         </div>
                                     </div>
                                     <div class="field subject">
-                                        <input type="text" name="subject" placeholder="¿ de que trata tu mensaje ?" class="cform-text" size="40" data-rule="maxlen:4" data-msg="Please enter at least 8 chars of subject">
-                                        <div class="validation">
+                                        {{ Form::text('subject', Input::old('subject'), array('class'=>'cform-text', 'placeholder'=>'¿ de que trata tu mensaje ?')) }}                                        <div class="validation">
+                                        {{ $errors->first('subject', '<span class="text-error">:message</span>') }}
                                         </div>
                                     </div>
                                 </div>
                                 <div class="span6">
                                     <div class="field message">
-                                        <textarea name="message" class="cform-textarea" cols="40" rows="10" data-rule="required" data-msg="Please write something for us"></textarea>
-                                        <div class="validation">
+                                        {{ Form::textarea('message', Input::old('message'), array('class'=>'cform-textarea', 'placeholder'=>'Mensaje', 'cols'=>'40', 'rows'=>'10', 'maxlength'=>'250' )) }}                                        <div class="validation">
+                                        {{ $errors->first('message', '<span class="text-error">:message</span>') }}
                                         </div>
                                     </div>
-                                    <input type="submit" value="Enviar" class="btn btn-theme pull-left">
+                                    {{ Form::submit('Enviar', array('class'=>'btn btn-theme pull-left')); }}
                                 </div>
                             </div>
-                        </form>
+                        {{ Form::close() }}
                     </div>
                 </div>
                 <!-- ./span12 -->

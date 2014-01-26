@@ -24,23 +24,21 @@
 	</head>
     
 	<body>
-        
-        <!-- Overlay Section -->
-        <div class="overlay"></div>
+
         <!-- End Overlay Section -->
 
         <!-- Navigation Section -->
         <nav class="navbar" role="navigation">
-            
+
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
                     <span class="sr-only">Toggle navigation</span>
-                    <span class="fa fa-bars"></span> 
+                    <span class="fa fa-bars"></span>
                 </button>
                 <a class="navbar-brand" href="#">HelloWorldPerú</a>
             </div>
-            
+
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="navbar">
                 <ul class="nav navbar-nav">
@@ -51,23 +49,28 @@
                         <a href="#portfolio">PORTAFOLIO</a>
                     </li>
                     <li class="home">
-                        <a href="/blog">
-                            <!--<img src="img/logo-no-text.png" alt="Home" width="128" height="128">-->
-                            <br>
-                            HelloWorldPerú                  
+                        <a href="#blog">
+                            <img src="img/logo.png" alt="Home" width="128" height="60">
                         </a>
                     </li>
                     <li>
                         <a href="#about">CONOCENOS</a>
-                    </li>    
+                    </li>
                     <li>
                         <a href="#contact">CONTACTANOS</a>
-                    </li> 
+                    </li>
                 </ul>
             </div>
 
         </nav>
         <!-- End Navigation Section -->
+        @if(Session::has('message'))
+        <div class="alert alert-{{ Session::get('message.option')}} float-msg">
+            <button type="button" class="close" data-dismiss="alert">&times;</button>
+            <h4>{{ Session::get('message.option')}}</h4>
+            {{ Session::get('message.message')}}
+        </div>
+        @endif
 
         @yield('contenido')
 
