@@ -80,7 +80,7 @@ return array(
 	|
 	*/
 
-	'username' => null,
+	'username' => 'contact@helloworldperu.com',
 
 	/*
 	|--------------------------------------------------------------------------
