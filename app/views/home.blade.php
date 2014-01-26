@@ -427,21 +427,25 @@
                             <div class="row">
                                 <div class="span6">
                                     <div class="field your-name">
-                                        {{ Form::text('name', '', array('class'=>'cform-text', 'placeholder'=>'¿ Como te llamas ?')) }}                                        <div class="validation">
+                                        {{ Form::text('name', Input::old('name'), array('class'=>'cform-text', 'placeholder'=>'¿ Como te llamas ?')) }}                                        <div class="validation">
+                                        {{ $errors->first('name', '<span class="text-error">:message</span>') }}
                                         </div>
                                     </div>
                                     <div class="field your-email">
-                                        {{ Form::text('email', '', array('class'=>'cform-text', 'placeholder'=>'¿ Cual es tu correo ?')) }}                                        <div class="validation">
+                                        {{ Form::text('email', Input::old('email'), array('class'=>'cform-text', 'placeholder'=>'¿ Cual es tu correo ?')) }}                                        <div class="validation">
+                                        {{ $errors->first('email', '<span class="text-error">:message</span>') }}
                                         </div>
                                     </div>
                                     <div class="field subject">
-                                        {{ Form::text('subject', '', array('class'=>'cform-text', 'placeholder'=>'¿ de que trata tu mensaje ?')) }}                                        <div class="validation">
+                                        {{ Form::text('subject', Input::old('subject'), array('class'=>'cform-text', 'placeholder'=>'¿ de que trata tu mensaje ?')) }}                                        <div class="validation">
+                                        {{ $errors->first('subject', '<span class="text-error">:message</span>') }}
                                         </div>
                                     </div>
                                 </div>
                                 <div class="span6">
                                     <div class="field message">
-                                        {{ Form::textarea('message', '', array('class'=>'cform-textarea', 'placeholder'=>'Mensaje', 'cols'=>'40', 'rows'=>'10' )) }}                                        <div class="validation">
+                                        {{ Form::textarea('message', Input::old('message'), array('class'=>'cform-textarea', 'placeholder'=>'Mensaje', 'cols'=>'40', 'rows'=>'10', 'maxlength'=>'250' )) }}                                        <div class="validation">
+                                        {{ $errors->first('message', '<span class="text-error">:message</span>') }}
                                         </div>
                                     </div>
                                     {{ Form::submit('Enviar', array('class'=>'btn btn-theme pull-left')); }}

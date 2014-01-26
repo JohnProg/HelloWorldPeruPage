@@ -64,6 +64,13 @@
 
         </nav>
         <!-- End Navigation Section -->
+        @if(Session::has('message'))
+        <div class="alert alert-{{ Session::get('message.option')}} float-msg">
+            <button type="button" class="close" data-dismiss="alert">&times;</button>
+            <h4>{{ Session::get('message.option')}}</h4>
+            {{ Session::get('message.message')}}
+        </div>
+        @endif
 
         @yield('contenido')
 

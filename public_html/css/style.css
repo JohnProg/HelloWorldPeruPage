@@ -232,6 +232,12 @@ nav {
 
 
 /* HOME */
+
+.float-msg {
+    position: absolute;
+    right: 0;
+}
+
 .overlay {
     background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAYAAADgzO9IAAAAHUlEQVQIW2NkYGD4D8SM6DRIAAQwJDFUwhRRUQcALRkSBISGlPAAAAAASUVORK5CYII=") repeat top left;
     content: "";
