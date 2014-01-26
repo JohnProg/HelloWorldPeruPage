@@ -1,4 +1,6 @@
 <?php
+use Input;
+use Redirect;
 
 class ContactController extends BaseController {
 

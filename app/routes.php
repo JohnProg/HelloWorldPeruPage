@@ -13,9 +13,9 @@ Route::group($optionsFront, function()
     Route::post('contact', 'HomeController@contactCreate');
 
 
-    Route::get('/prueba/{id}/{nombre?}', function($id, $nombre){
-        return 'User: '.$id.' su nombre es: '.$nombre;
-    });
+//    Route::get('/prueba/{id}/{nombre?}/', function($id, $nombre='aaa'){
+//        return 'User: '.$id.' su nombre es: '.$nombre;
+//    });
 });
 
 /*

@@ -422,8 +422,11 @@
                         <div id="sendmessage">
                              Your message has been sent. Thank you!
                         </div>
-                        {{ Form::open(array('url' => 'contact/bar')) }}
-
+                        {{ Form::open(array('url' => 'contact', 'method' => 'post')) }}
+                            {{ Form:text('nombre') }}
+                            {{ Form:text('correo') }}
+                            {{ Form:text('asunto') }}
+                            {{ Form:submit('Enviar') }}
                         {{ Form::close() }}
                         <form action="" method="post" class="contactForm">
                             <div class="row">
