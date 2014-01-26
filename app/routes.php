@@ -10,6 +10,7 @@ Route::group($optionsFront, function()
 {
 
     Route::get('/', array('as'=>'home', 'uses'=>'HomeController@getIndex'));
+    Route::get('/test', array('as'=>'test', 'uses'=>'ContactController@getList'));
     Route::post('contact', 'ContactController@postContactCreate');
 
 //    Route::get('/prueba/{id}/{nombre?}/', function($id, $nombre='aaa'){
