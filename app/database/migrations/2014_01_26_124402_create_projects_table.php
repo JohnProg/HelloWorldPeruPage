@@ -16,8 +16,8 @@ class CreateProjectsTable extends Migration {
 		{
 			$table->increments('id');
             $table->string('title', 20);
-            $table->smallInteger('type');
-            $table->string('description');
+            $table->smallInteger('type')->default(1);
+            $table->string('description')->nullable();
             $table->string('url');
 			$table->timestamps();
 		});

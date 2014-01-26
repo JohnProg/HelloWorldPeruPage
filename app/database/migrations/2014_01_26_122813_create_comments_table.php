@@ -19,7 +19,7 @@ class CreateCommentsTable extends Migration {
             $table->string('email', 40);
             $table->string('subject');
             $table->text('message');
-            $table->boolean('status');
+            $table->boolean('status')->default(1);
             $table->timestamps();
 		});
 	}
