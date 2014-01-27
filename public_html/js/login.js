@@ -19,6 +19,7 @@ $(document).on('ready', function(){
 				}
 			},
 			error: function(data){
+				debugger;
 			}
 		});
 		return false;

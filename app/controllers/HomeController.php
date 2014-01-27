@@ -4,11 +4,11 @@ class HomeController extends BaseController {
 
 	public function getIndex()
     {
-        return View::make('../auth/homepage');
+        return View::make('web/homepage');
     }
     
 	public function showLogin(){
-		return View::make('../auth/login');
+		return View::make('web/login');
 	}
 
 	public function doLogin()
@@ -36,13 +36,11 @@ class HomeController extends BaseController {
 
 				if (Auth::attempt($userdata)) {					
 					$data = array('status'=>true,'msg'=>'Bienvenido!');
-					// return Response::json($data);
-					return 'a';
+					return Response::json($data);
 
 				} else {	 	
 					$data = array('status'=>false,'msg'=>'Datos incorrectos!');
-					// return Resonse::json($data);
-					return 'aa';
+					return Resonse::json($data);
 
 				}
 
@@ -58,7 +56,7 @@ class HomeController extends BaseController {
 	}
 	
 	public function showRegister(){
-		return View::make('../auth/register');
+		return View::make('web/register');
 	}
 
 	public function doRegister()
