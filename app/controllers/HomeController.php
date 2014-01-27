@@ -2,18 +2,6 @@
 
 class HomeController extends BaseController {
 
-	/*
-	|--------------------------------------------------------------------------
-	| Default Home Controller
-	|--------------------------------------------------------------------------
-	|
-	| You may wish to use controllers instead of, or in addition to, Closure
-	| based routes. That's great! Here is an example controller method to
-	| get you started. To route to this controller, just add the route:
-	|
-	|	Route::get('/', 'HomeController@showWelcome');
-	|
-	*/
 	public function getIndex()
     {
         return View::make('home');
@@ -89,7 +77,7 @@ class HomeController extends BaseController {
 			}
 			else{
 				$inputs = Input::all();
-				Input::get('password') = Hash::make(Input::get('password'));
+                $inputs['clave'] = Hash::make(Input::get('clave'));
 				$user = User::create(Input::all());
 				$data = array('status'=>true,'msg'=>'Registrado Correctamente');
 				Response::json($data);
@@ -101,7 +89,7 @@ class HomeController extends BaseController {
 	public function showDashboard()
 	{		
 		// return View::make('dashboard/dashboard');
-		return echo 'Bienvenido '. Auth::user()->email . ', su Id es: '.Auth::user()->id;
+		return 'Bienvenido '. Auth::user()->email . ', su Id es: '.Auth::user()->id;
 	}
 
 
