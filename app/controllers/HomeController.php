@@ -83,7 +83,6 @@ class HomeController extends BaseController {
 				$user = User::create($inputs);
                 $data = array('status'=>true,'msg'=>'Registrado Correctamente');
 				Response::json($data);
-
 			}
 		}			
 	}
