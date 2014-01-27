@@ -14,7 +14,6 @@ class blogController extends BaseController {
 	|	Route::get('/', 'HomeController@showWelcome');
 	|
 	*/
-
 	public function showAllArticles()
 	{	
 		return View::make('../blog.listarticles');
