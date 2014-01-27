@@ -16,18 +16,15 @@ Route::group($optionsFront, function()
     Route::post('/login', 'HomeController@doLogin');
     Route::get('/logout', 'HomeController@doLogout');
 
-
-    Route::get('/register', 'HomeController@showRegister');   
-    Route::post('/register', 'HomeController@doRegister');
-    
+    Route::get('/register', 'HomeController@showRegister');
 
     Route::get('/', array('as'=>'home', 'uses'=>'HomeController@getIndex'));
     Route::get('/test', array('as'=>'test', 'uses'=>'ContactController@getList'));
     Route::post('/contact', 'ContactController@postContactCreate');
 
-   Route::get('/prueba/{id}/{nombre?}/', function($id, $nombre='aaa'){
-       return 'User: '.$id.' su nombre es: '.$nombre;
-   });
+//   Route::get('/prueba/{id}/{nombre?}/', function($id, $nombre='aaa'){
+//       return 'User: '.$id.' su nombre es: '.$nombre;
+//   });
 });
 // /*
 // |--------------------------------------------------------------------------
