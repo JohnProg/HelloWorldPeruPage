@@ -48,13 +48,11 @@ class HomeController extends BaseController {
 
 				if (Auth::attempt($userdata)) {					
 					$data = array('status'=>true,'msg'=>'Bienvenido!');
-					// return Response::json($data);
-					return 'a';
+					return Response::json($data);
 
 				} else {	 	
 					$data = array('status'=>false,'msg'=>'Datos incorrectos!');
-					// return Resonse::json($data);
-					return 'aa';
+					return Resonse::json($data);
 
 				}
 
