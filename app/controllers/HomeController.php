@@ -4,11 +4,11 @@ class HomeController extends BaseController {
 
 	public function getIndex()
     {
-        return View::make('home');
+        return View::make('../auth/homepage');
     }
     
 	public function showLogin(){
-		return View::make('auth/login');
+		return View::make('../auth/login');
 	}
 
 	public function doLogin()
@@ -36,11 +36,13 @@ class HomeController extends BaseController {
 
 				if (Auth::attempt($userdata)) {					
 					$data = array('status'=>true,'msg'=>'Bienvenido!');
-					return Response::json($data);
+					// return Response::json($data);
+					return 'a';
 
 				} else {	 	
 					$data = array('status'=>false,'msg'=>'Datos incorrectos!');
-					return Response::json($data);
+					// return Resonse::json($data);
+					return 'aa';
 
 				}
 
@@ -56,7 +58,7 @@ class HomeController extends BaseController {
 	}
 	
 	public function showRegister(){
-		return View::make('auth/register');
+		return View::make('../auth/register');
 	}
 
 	public function doRegister()
@@ -77,9 +79,9 @@ class HomeController extends BaseController {
 			}
 			else{
 				$inputs = Input::all();
-                $inputs['clave'] = Hash::make(Input::get('clave'));
-				$user = User::create(Input::all());
-				$data = array('status'=>true,'msg'=>'Registrado Correctamente');
+				$inputs['password'] = Hash::make($inputs['password']);
+				$user = User::create($inputs);
+                $data = array('status'=>true,'msg'=>'Registrado Correctamente');
 				Response::json($data);
 
 			}
@@ -89,8 +91,9 @@ class HomeController extends BaseController {
 	public function showDashboard()
 	{		
 		// return View::make('dashboard/dashboard');
-		return 'Bienvenido '. Auth::user()->email . ', su Id es: '.Auth::user()->id;
-	}
+		//return echo 'Bienvenido '. Auth::user()->email . ', su Id es: '.Auth::user()->id;
+		return 'a';
+    }
 
 
 }
