@@ -12,12 +12,12 @@ Route::group($optionsFront, function()
 	Route::get('blog/{id}', 'blogController@showOneArticle');
     
 
-    Route::get('login',array('as'=>'login', 'uses'=>'@HomeController@showLogin'));
+    Route::get('login',array('as'=>'login', 'uses'=>'HomeController@showLogin'));
     Route::post('login', 'HomeController@doLogin');
     Route::get('logout', 'HomeController@doLogout');
 
 
-    Route::get('/register', array('as'=>'register', 'uses'=>'@HomeController@showRegister'));   
+    Route::get('/register', array('as'=>'register', 'uses'=>'HomeController@showRegister'));
     Route::post('/register', 'HomeController@doRegister');
     
 
