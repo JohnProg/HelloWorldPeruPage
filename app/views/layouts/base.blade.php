@@ -49,7 +49,7 @@
                         <a href="#portfolio">PORTAFOLIO</a>
                     </li>
                     <li class="home">
-                        <a href="#home">
+                        <a href="#blog">
                             <img src="img/logo.png" alt="Home" width="128" height="60">
                         </a>
                     </li>

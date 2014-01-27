@@ -8,6 +8,18 @@
 $optionsFront = array();
 Route::group($optionsFront, function()
 {
+	Route::get('blog', 'blogController@showAllArticles');    
+	Route::get('blog/{id}', 'blogController@showOneArticle');
+    
+
+    Route::get('login',array('as'=>'login', 'uses'=>'@HomeController@showLogin'));
+    Route::post('login', 'HomeController@doLogin');
+    Route::get('logout', 'HomeController@doLogout');
+
+
+    Route::get('/register', array('as'=>'register', 'uses'=>'@HomeController@showRegister'));   
+    Route::post('/register', 'HomeController@doRegister');
+    
 
     Route::get('/', array('as'=>'home', 'uses'=>'HomeController@getIndex'));
     Route::get('/test', array('as'=>'test', 'uses'=>'ContactController@getList'));
@@ -24,8 +36,10 @@ Route::group($optionsFront, function()
 |--------------------------------------------------------------------------
 */
 
-$optionsBack = array();
+$optionsBack = array('before' => 'auth');
 Route::group($optionsBack, function()
-{
-
+{   
+    Route::get('dashboard', 'HomeController@showDashboard');
+    Route::get('blog/create', 'blogController@createOneArticle');
+    Route::post('blog/create', 'blogController@createOneArticle');
 });
