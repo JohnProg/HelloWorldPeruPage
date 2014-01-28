@@ -10,7 +10,6 @@ Route::group($optionsFront, function()
 {
     //Home
     Route::get('/', array('as'=>'home', 'uses'=>'HomeController@getIndex'));
-    Route::get('/test', array('as'=>'test', 'uses'=>'Dashboard\ProjectController@getList'));
     Route::post('/contact', 'ContactController@postContactCreate');
 
     //Blog
@@ -31,7 +30,10 @@ Route::group($optionsFront, function()
 // |--------------------------------------------------------------------------
 // */
 
-$optionsBack = array('before' => 'auth');
+$optionsBack = array(
+    'before' => 'auth',
+    'prefix' => 'admin'
+);
 Route::group($optionsBack, function()
 {
 
@@ -41,7 +43,8 @@ Route::group($optionsBack, function()
     Route::post('/blog/create', 'blogController@createOneArticle');
 
     //Messages
-    Route::get('/messages', 'blogController@createOneArticle');
+    Route::get('/messages', 'Dashboard\ContactController@getListComment');
     //Projects
+
 
 });

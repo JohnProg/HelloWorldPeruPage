@@ -50,8 +50,4 @@ class ContactController extends BaseController {
 
     }
 
-    public function contactStatusRedirect(){
-
-    }
-
 }

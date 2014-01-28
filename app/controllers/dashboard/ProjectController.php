@@ -5,8 +5,20 @@ use Comment;
 
 class ProjectController extends BaseController {
 
-    public function getList(){
+    public function getListProject(){
         $list = Comment::all();
         echo $list;
+    }
+
+    public function getCreateProject(){
+
+    }
+
+    public function getUpdateProject(){
+
+    }
+
+    public function getDeleteProject(){
+
     }
 }
