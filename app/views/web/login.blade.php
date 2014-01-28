@@ -9,14 +9,12 @@
 		
 
 		<p>
-			{{ Form::label('email', 'Email Address') }}
-			{{ Form::text('email', Input::old('email'), array('placeholder' => 'john_js@gmail.com')) }}
+			{{ Form::text('email', Input::old('email'), array('placeholder' => 'Your email')) }}
 			<p>{{ $errors->first('email') }}</p>
 		</p>
 
 		<p>
-			{{ Form::label('password', 'Password') }}
-			{{ Form::password('password') }}
+			{{ Form::password('password', array('placeholder' => 'Your password')) }}
 			<p>
 				{{ $errors->first('password') }}
 			</p>
