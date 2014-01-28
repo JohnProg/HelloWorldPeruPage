@@ -50,18 +50,8 @@ class ContactController extends BaseController {
 
     }
 
-    public function getList(){
-        $list = Comment::all();
-        echo $list;
-        //$list = Comment::where('status','=',1)->get();
-    }
-
     public function contactStatusRedirect(){
 
-    }
-
-    public function getTest(){
-        echo "hola";
     }
 
 }
