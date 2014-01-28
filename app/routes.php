@@ -8,23 +8,22 @@
 $optionsFront = array();
 Route::group($optionsFront, function()
 {
-	Route::get('/blog', 'blogController@showAllArticles');    
-	Route::get('/blog/{id}', 'blogController@showOneArticle');
-    
-
-    Route::get('/login', 'HomeController@showLogin');
-    Route::post('/login', 'HomeController@doLogin');
-    Route::get('/logout', 'HomeController@doLogout');
-
-    Route::get('/register', 'HomeController@showRegister');
-
+    //Home
     Route::get('/', array('as'=>'home', 'uses'=>'HomeController@getIndex'));
     Route::get('/test', array('as'=>'test', 'uses'=>'ContactController@getList'));
     Route::post('/contact', 'ContactController@postContactCreate');
 
-//   Route::get('/prueba/{id}/{nombre?}/', function($id, $nombre='aaa'){
-//       return 'User: '.$id.' su nombre es: '.$nombre;
-//   });
+    //Blog
+	Route::get('/blog', 'blogController@showAllArticles');    
+	Route::get('/blog/{id}', 'blogController@showOneArticle');
+    
+    //Login
+    Route::get('/login', 'HomeController@showLogin');
+    Route::post('/login', 'HomeController@doLogin');
+    Route::get('/logout', 'HomeController@doLogout');
+
+    //Rgister
+    Route::get('/register', 'HomeController@showRegister');
 });
 // /*
 // |--------------------------------------------------------------------------
@@ -34,8 +33,15 @@ Route::group($optionsFront, function()
 
 $optionsBack = array('before' => 'auth');
 Route::group($optionsBack, function()
-{   
+{
+
     Route::get('/dashboard', 'HomeController@showDashboard');
+    //Blog
     Route::get('/blog/create', 'blogController@createOneArticle');
     Route::post('/blog/create', 'blogController@createOneArticle');
+
+    //Messages
+    Route::get('/messages', 'blogController@createOneArticle');
+    //Projects
+
 });
