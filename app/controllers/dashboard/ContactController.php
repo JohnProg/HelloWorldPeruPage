@@ -8,7 +8,7 @@ class ContactController extends BaseController {
 
     public function getListComment(){
         $list = Comment::all();
-        return View::make('dashboard/message');
+        return View::make('dashboard/message')->with('comments',$list);
     }
 
     public function getDeleteComment(){
