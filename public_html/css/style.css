@@ -986,12 +986,3 @@ footer .logo {
     color: white;
     opacity: .5;
 }
-
-/* like facebook*/
-.fb-like{
-    position: absolute !important;
-    top: 5em;
-}
-.see_info{
-    width: 140px !important;
-}

@@ -84,20 +84,10 @@
                     <div class="col-sm-12">
                         <ul class="social list-inline">
                             <li>
-
-                                <div>
-                                    <a href="https://www.facebook.com/helloworldperu" class="facebook">
-                                        <i class="fa fa-facebook"></i>
-                                    </a>
-                                </div>
-                                <div class="fb-like" data-href="https://www.facebook.com/helloworldperu?fref=ts" data-layout="box_count" data-action="like" data-show-faces="true" data-share="false"></div>
+                                <div class="fb-like" data-href="https://www.facebook.com/helloworldperu?fref=ts" data-layout="box_count" data-action="like" data-show-faces="true" data-share="false"></div>        
                             </li>
                             <li>
-                                <div>
-                                    <a href="#" class="twitter">
-                                        <i class="fa fa-twitter"></i>
-                                    </a>
-                                </div>
+                                <a href="https://twitter.com/helloworldperu" class="twitter-follow-button" data-show-count="true">Follow @helloworldperu</a>
                             </li>
                             <li>
                                 <div>
@@ -114,18 +104,10 @@
                                 </div>
                             </li> 
                             <li>
-                                <div>
-                                    <a href="#" class="google-plus">
-                                        <i class="fa fa-google-plus"></i>
-                                    </a>
-                                </div>
+                                <div class="g-plusone" data-size="tall" data-href="https://plus.google.com/u/0/103116037877720267789/posts"></div>
                             </li> 
                             <li>
-                                <div>
-                                    <a href="https://www.youtube.com/user/HelloworldPeru" class="youtube">
-                                        <i class="fa fa-youtube"></i>
-                                    </a>
-                                </div>
+                                <div class="g-ytsubscribe" data-channel="HelloWorldPeru" data-layout="default" data-count="default" data-onytevent="onYtEvent"></div>
                             </li> 
                         </ul>
                     </div> 
@@ -166,6 +148,8 @@
     
     
  </body>
+
+<!--facebook--> 
 <div id="fb-root"></div>
 <script>
     (function(d, s, id) {
@@ -189,4 +173,48 @@
     })();
 
 </script>
+
+<!-- Google+ -->
+<script type="text/javascript">
+  window.___gcfg = {lang: 'es-419'};
+
+  (function() {
+    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    po.src = 'https://apis.google.com/js/platform.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();
+</script>
+
+<!-- Youtube-->
+<script src="https://apis.google.com/js/platform.js"></script>
+<script>
+  function onYtEvent(payload) {
+    if (payload.eventType == 'subscribe') {
+      // Add code to handle subscribe event.
+    } else if (payload.eventType == 'unsubscribe') {
+      // Add code to handle unsubscribe event.
+    }
+    if (window.console) { // for debugging only
+      window.console.log('YT event: ', payload);
+    }
+  }
+</script>
+
+<!-- Twitter -->
+
+<script>
+    !function(d,s,id){
+        var js,
+            fjs=d.getElementsByTagName(s)[0],
+            p=/^http:/.test(d.location)?'http':'https';
+        if(!d.getElementById(id)){
+            js=d.createElement(s);
+            js.id=id;
+            js.src=p+'://platform.twitter.com/widgets.js';
+            fjs.parentNode.insertBefore(js,fjs);
+        }
+    }(document, 'script', 'twitter-wjs');
+</script>
+
+
  </html>
