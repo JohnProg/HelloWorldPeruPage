@@ -144,9 +144,6 @@
         <!-- Scripts Section -->
         @yield('script')
         <!-- End Scripts Section -->
-        
-    
-    
  </body>
 
 <!--facebook--> 
