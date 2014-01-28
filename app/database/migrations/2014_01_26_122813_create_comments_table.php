@@ -31,10 +31,10 @@ class CreateCommentsTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('comments', function(Blueprint $table)
-		{
-			Schema:drop('users');
-		});
-	}
+        Schema::drop('comments', function(Blueprint $table)
+        {
+            Schema:drop('comments');
+        });
+    }
 
 }
