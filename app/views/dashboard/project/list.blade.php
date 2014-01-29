@@ -6,7 +6,7 @@
     <h1> Proyectos
         <small>
         <span class="btn-group">
-            <button type="button" class="btn btn-primary">Nuevo</button>
+            <a href="{{ URL::route('admin_projects_create'); }}" type="button" class="btn btn-primary">Nuevo</a>
         </span>
         </small>
     </h1>

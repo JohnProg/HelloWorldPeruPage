@@ -49,6 +49,8 @@ Route::group($optionsBack, function()
 
     //Projects
     Route::get('/projects', array('as' => 'admin_projects', 'uses' => 'Dashboard\ProjectController@getListProject'));
+    Route::get('/projects/create', array('as' => 'admin_projects_create', 'uses' => 'Dashboard\ProjectController@getFormCreateProject'));
+    Route::post('/projects/save', array('as' => 'admin_projects_save', 'uses' => 'Dashboard\ProjectController@postCreateProject'));
 
 
 });
