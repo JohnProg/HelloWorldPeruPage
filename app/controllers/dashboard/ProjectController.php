@@ -1,13 +1,15 @@
 <?php
 namespace Dashboard;
 use BaseController;
-use Comment;
+use Project;
+use View;
 
 class ProjectController extends BaseController {
 
     public function getListProject(){
-        $list = Comment::all();
-        echo $list;
+        $list = Project::all();
+        return View::make('dashboard/project/list')->with('projects',$list);
+
     }
 
     public function getCreateProject(){

@@ -25,7 +25,7 @@
             <ul class="nav navbar-nav">
                 <li class="active"><a href="#">Home</a></li>
                 <li><a href="{{ URL::route('admin_messages'); }}">Mensajes</a></li>
-                <li><a href="#contact">Project</a></li>
+                <li><a href="{{ URL::route('admin_projects'); }}">Proyectos</a></li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
                     <ul class="dropdown-menu">
@@ -40,9 +40,8 @@
                 </li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="../navbar/">Default</a></li>
-                <li class="active"><a href="./">Static top</a></li>
-                <li><a href="../navbar-fixed-top/">Fixed top</a></li>
+
+                <li><a href="../navbar-fixed-top/">Log Out</a></li>
             </ul>
         </div><!--/.nav-collapse -->
     </div>

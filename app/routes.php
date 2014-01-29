@@ -48,6 +48,7 @@ Route::group($optionsBack, function()
     Route::get('/messages/delete/{pk}', array('as' => 'admin_messages_delete', 'uses' => 'Dashboard\ContactController@getDeleteComment'));
 
     //Projects
+    Route::get('/projects', array('as' => 'admin_projects', 'uses' => 'Dashboard\ProjectController@getListProject'));
 
 
 });

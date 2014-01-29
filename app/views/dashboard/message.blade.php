@@ -18,9 +18,9 @@
         <tbody>
             @foreach($comments as $comment)
                 <tr>
-                    <td>{{ $comment->email }}</td>
+                    <td>{{ $comment->name }} - {{ $comment->email }}</td>
                     <td>{{ $comment->message }}</td>
-                    <td><a href="{{ URL::route('admin_messages_delete', 1); }}">Eliminar</a></td>
+                    <td><a href="{{ URL::route('admin_messages_delete', $comment->id ); }}">Eliminar</a></td>
                 </tr>
             @endforeach
         </tbody>
