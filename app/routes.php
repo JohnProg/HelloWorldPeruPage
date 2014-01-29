@@ -39,11 +39,14 @@ Route::group($optionsBack, function()
 
     Route::get('/dashboard', 'HomeController@showDashboard');
     //Blog
+
     Route::get('/blog/create', 'blogController@createOneArticle');
     Route::post('/blog/create', 'blogController@createOneArticle');
 
     //Messages
-    Route::get('/messages', 'Dashboard\ContactController@getListComment');
+    Route::get('/messages', array('as' => 'admin_messages', 'uses' => 'Dashboard\ContactController@getListComment'));
+    Route::get('/messages/delete/{pk}', array('as' => 'admin_messages_delete', 'uses' => 'Dashboard\ContactController@getDeleteComment'));
+
     //Projects
 
 

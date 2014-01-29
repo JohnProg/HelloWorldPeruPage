@@ -3,16 +3,19 @@ namespace Dashboard;
 use BaseController;
 use Comment;
 use View;
+use Redirect;
 
 class ContactController extends BaseController {
 
     public function getListComment(){
-        $list = Comment::all();
+        $list = Comment::where('status', 1)->get();
         return View::make('dashboard/message')->with('comments',$list);
     }
 
-    public function getDeleteComment(){
-        $list = Comment::all();
-        echo $list;
+    public function getDeleteComment($pk){
+        $comment = Comment::find($pk);
+        $comment->status = 0;
+        $comment->save();
+        return Redirect::route('admin_messages');
     }
 }
