@@ -23,16 +23,17 @@
         <tbody>
         @foreach($projects as $project)
         <tr>
-            <td></td>
+            <td><img src="{{ $project->get_main_image() }}" style="width: 120px;height: 80px;"/> </td>
             <td>{{ $project->title }}</td>
             <td>{{ $project->description }}</td>
             <td>
-                <a href="">Eliminar</a> |
+                <a href="{{ URL::route('admin_projects_delete', $project->id ); }}">Eliminar</a> |
                 <a href="">Actualizar</a> |
             </td>
         </tr>
         @endforeach
         </tbody>
     </table>
+    {{ $projects->links(); }}
 </div>
 @stop
