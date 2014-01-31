@@ -11,20 +11,31 @@ use File;
 use Response;
 use View;
 use path;
+use Resonse;
 
 class ProjectController extends BaseController {
 
     public function getListProject(){
         $list = Project::where('status', 1)->paginate(5);
-        return View::make('dashboard/project/list')->with('projects',$list);
+        return View::make('dashboard.project.list')->with('projects',$list);
+    }
 
+    public function getData($pk) {
+        $project = Project::find($pk);
+        $project->photos = $project->get_all_images();
+        return Response::json($project);
+    }
+
+    public function getPhotos($pk) {
+        $project = Project::find($pk);
+        return Response::json($project->get_all_images());
     }
 
     public function getFormCreateProject(){
         return View::make('dashboard.project.create');
     }
 
-    public function postCreateProject(){
+    public function postCreateProject() {
 
         $rules = array(
             'title'       => 'required',
@@ -38,14 +49,14 @@ class ProjectController extends BaseController {
         // process the login
         if ($validator->fails()) {
             Session::flash('message', array(
-                'message'=>'No se ha podido crear el prouyecto',
+                'message'=>'No se ha podido crear el proyecto',
                 'option' =>'warning'
             ));
             return Redirect::back()->withInput()->withErrors($validator);
         } else {
             $project = new Project;
-            $project->title       = Input::get('title');
-            $project->type      = Input::get('type');
+            $project->title = Input::get('title');
+            $project->type = Input::get('type');
             $project->description = Input::get('description');
             $project->url = Input::get('url');
             $project->save();
@@ -63,7 +74,7 @@ class ProjectController extends BaseController {
     }
 
 
-    public function postUpload(){
+    public function postUpload($id) {
 
         $input = Input::all();
         $rules = array(
@@ -76,23 +87,61 @@ class ProjectController extends BaseController {
             return Response::make($validation->errors->first(), 400);
         }
 
+        $project = Project::find($id);
+
         $file = Input::file('file');
-
-        $destinationPath = public_path().'/uploads/'.str_random(8);
-        $filename = $file->getClientOriginalName();;
-        //$extension =$file->getClientOriginalExtension();
-        $upload_success = Input::file('file')->move($destinationPath, $filename);
-
-        if( $upload_success ) {
-            return Response::json('success', 200);
-        } else {
-            return Response::json('error', 400);
-        }
-
+        $photo = new Photo;
+        $photo->model = 'projects';
+        $photo->object_id = $project->id;
+        $photo->save();
+        $photo->upload_image($file);
     }
 
-    public function getUpdateProject(){
+    public function getUpdateProject($pk){
+        $project = Project::find($pk);
 
+        return View::make('dashboard.project.update')
+            ->with('project', $project);
+    }
+
+    public function getDeletePhoto($pk){
+
+        $photo = Photo::find($pk);
+        $project_id = $photo->object_id;
+        $photo->delete();
+        File::delete($photo->file);
+        return Redirect::route('admin_projects_update',array($project_id));
+    }
+
+    public function putUpdateProject($id){
+
+        $rules = array(
+            'title'       => 'required',
+            'description'   => 'required',
+            'url'   => 'required',
+            'type' => 'required|numeric',
+        );
+        $validator = Validator::make(Input::all(), $rules);
+
+        // process the login
+        if ($validator->fails()) {
+            Session::flash('message', array(
+                'message'=>'No se ha actualizar el proyecto',
+                'option' =>'warning'
+            ));
+            return Redirect::back()->withInput()->withErrors($validator);
+        } else {
+            // store
+            $project = Project::find($id);
+            $project->title = Input::get('title');
+            $project->type = Input::get('type');
+            $project->description = Input::get('description');
+            $project->url = Input::get('url');
+            $project->save();
+
+            // redirect
+            return Redirect::route('admin_projects_update', $project->id);
+        }
     }
 
     public function getDeleteProject($pk){

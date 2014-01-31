@@ -6,7 +6,8 @@ class Photo extends Eloquent {
     public function upload_image($file) {
         $filePath = '/uploads/'.$this->model.'/'.$this->object_id;
         $destinationPath = public_path().$filePath;
-        $filename = $file->getClientOriginalName();;
+        $filename = $file->getClientOriginalName();
+        $filename = $this->id.'_'.$filename;
         $file->move($destinationPath, $filename);
         $this->file = $filePath.'/'.$filename;
         $this->save();

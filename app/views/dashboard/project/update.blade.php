@@ -14,12 +14,13 @@
 <ul class="nav nav-tabs">
     <li class="active"><a href="#information" data-toggle="tab">Informacion</a></li>
     <li><a href="#photos" data-toggle="tab">Fotos</a></li>
+    <li><a href="#upload" data-toggle="tab">Subir</a></li>
 </ul>
 
 <!-- Tab panes -->
 <div class="tab-content">
     <div class="tab-pane active" id="information">
-        {{ Form::open(array('route' => 'admin_projects_save', 'class'=>'form-horizontal', 'role' =>'form')) }}
+        {{ Form::model($project, array('route' => array('admin_projects_update_form', $project->id), 'method' => 'PUT', 'class'=>'form-horizontal', 'role' =>'form')) }}
 
         <div class="form-group">
             {{ Form::label('title', 'Titulo', array('class'=>'col-sm-2 control-label')) }}
@@ -59,11 +60,24 @@
         </div>
 
         {{ Form::close() }}
-
-
     </div>
-    <div class="tab-pane" id="photos">
-        <form action="{{ url('admin/projects/photos/upload')}}" class="dropzone" id="my-awesome-dropzone"></form>
+    <div class="tab-pane" id="photos" ng-app="listApp">
+
+
+        <div class="container marketing" ng-controller="listController" ng-init="init()">
+
+            <!-- Three columns of text below the carousel -->
+            <div class="row" ng-repeat="item in pagedItems[currentPage]" class="ng-cloak">
+                <div class="col-lg-3" >
+                    <img src="{[{ item.file }]}" alt="..." class="img-rounded">
+                    <p><a class="btn btn-danger" href="{{ URL::to('admin/projects/photo/delete/') }}/{[{ item.id }]}" role="button">Delete</a></p>
+                </div><!-- /.col-lg-3 -->
+            </div><!-- /.row -->
+
+        </div>
+    </div>
+    <div class="tab-pane" id="upload">
+        <form action="{{ URL::route('admin_projects_photo_upload', $project->id); }}" class="dropzone" id="my-awesome-dropzone" method="PUT"></form>
     </div>
 </div>
 
@@ -72,4 +86,15 @@
 @section('extra_scripts')
 @parent
 {{ HTML::script('js/dropzone.js') }}
+{{ HTML::script('js/modules/list/app.js') }}
+{{ HTML::script('js/modules/list/controller.js') }}
+{{ HTML::script('js/modules/list/listFactory.js') }}
+
+<script>
+    angular.module('listApp').value('listUrls', {
+        dataUrl: "{{ URL::route('admin_projects_data_photo_json', $project->id); }}"
+    });
+
+</script>
+
 @stop

@@ -12,4 +12,10 @@ class Project extends Eloquent {
         return $photo->file;
     }
 
+    public function get_all_images(){
+        $photos = Photo::where('object_id', '=', $this->id)
+            ->where('model', '=','projects')->get()->toArray();
+        return $photos;
+    }
+
 }

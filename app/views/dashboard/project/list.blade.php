@@ -28,7 +28,7 @@
             <td>{{ $project->description }}</td>
             <td>
                 <a href="{{ URL::route('admin_projects_delete', $project->id ); }}">Eliminar</a> |
-                <a href="">Actualizar</a> |
+                <a href="{{ URL::route('admin_projects_update', $project->id ); }}">Actualizar</a> |
             </td>
         </tr>
         @endforeach

@@ -54,6 +54,7 @@
 <script src="https://code.jquery.com/jquery.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="{{ URL::asset('js/bootstrap.min.js') }}"></script>
+<script src="{{ URL::asset('js/angular.min.js') }}"></script>
 @section('extra_scripts')
 
 @show
