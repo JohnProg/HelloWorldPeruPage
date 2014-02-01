@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Bootstrap -->
     <link rel="stylesheet" type="text/css" href="{{ URL::asset('css/bootstrap.min.css') }}">
+    @section('extra_styles')
 
+    @show
     <![endif]-->
 </head>
 <body cz-shortcut-listen="true">
@@ -52,5 +54,10 @@
 <script src="https://code.jquery.com/jquery.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="{{ URL::asset('js/bootstrap.min.js') }}"></script>
+<script src="{{ URL::asset('js/angular.min.js') }}"></script>
+@section('extra_scripts')
+
+@show
+
 </body>
 </html>

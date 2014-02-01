@@ -18,6 +18,7 @@ class CreateProjectsTable extends Migration {
             $table->string('title', 20);
             $table->smallInteger('type')->default(1);
             $table->string('description')->nullable();
+            $table->boolean('status')->default(1);
             $table->string('url');
 			$table->timestamps();
 		});

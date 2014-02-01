@@ -50,5 +50,19 @@ Route::group($optionsBack, function()
     //Projects
     Route::get('/projects', array('as' => 'admin_projects', 'uses' => 'Dashboard\ProjectController@getListProject'));
 
+    Route::get('/projects/create', array('as' => 'admin_projects_create', 'uses' => 'Dashboard\ProjectController@getFormCreateProject'));
+    Route::post('/projects/save', array('as' => 'admin_projects_save', 'uses' => 'Dashboard\ProjectController@postCreateProject'));
+
+    Route::get('/projects/delete/{pk}', array('as' => 'admin_projects_delete', 'uses' => 'Dashboard\ProjectController@getDeleteProject'));
+    Route::get('/projects/photo/delete/{pk}', array('as' => 'admin_projects_photo_delete', 'uses' => 'Dashboard\ProjectController@getDeletePhoto'));
+
+    Route::get('/projects/update/{pk}', array('as' => 'admin_projects_update', 'uses' => 'Dashboard\ProjectController@getUpdateProject'));
+    Route::put('/projects/update/form/{pk}', array('as' => 'admin_projects_update_form', 'uses' => 'Dashboard\ProjectController@putUpdateProject'));
+    Route::post('/projects/photos/upload/{pk}', array('as' => 'admin_projects_photo_upload', 'uses' => 'Dashboard\ProjectController@postUpload'));
+
+    Route::get('/projects/data-json/{pk}', array('as' => 'admin_projects_data_json', 'uses' => 'Dashboard\ProjectController@getData'));
+    Route::get('/projects/data-json/photos/{pk}', array('as' => 'admin_projects_data_photo_json', 'uses' => 'Dashboard\ProjectController@getPhotos'));
+
+
 
 });
