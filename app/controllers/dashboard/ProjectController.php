@@ -28,7 +28,8 @@ class ProjectController extends BaseController {
 
     public function getPhotos($pk) {
         $project = Project::find($pk);
-        return Response::json($project->get_all_images());
+//        return Response::json($project->get_all_images());
+        return Response::json(Photo::find(4)->photos_details());
     }
 
     public function getFormCreateProject(){
@@ -72,7 +73,6 @@ class ProjectController extends BaseController {
             return Redirect::route('admin_projects');
         }
     }
-
 
     public function postUpload($id) {
 
