@@ -8,6 +8,8 @@
 $optionsFront = array();
 Route::group($optionsFront, function()
 {
+
+    Route::get('/projects', array('as' => 'api_projects', 'uses' => 'Api\ProjectController@getData'));
     //Home
     Route::get('/', array('as'=>'home', 'uses'=>'HomeController@getIndex'));
     Route::post('/contact', 'ContactController@postContactCreate');
@@ -72,12 +74,11 @@ Route::group($optionsBack, function()
 // | Appi
 // |--------------------------------------------------------------------------
 // */
-$optionsAppi = array(
-    'prefix' => 'appi'
+$optionsApi = array(
+    'prefix' => 'api'
 );
 
-Route::group($optionsAppi, function()
+Route::group($optionsApi, function()
 {
-
-    Route::get('/projects', 'Api\ProjectController@getData');
+    Route::get('/projects', array('as' => 'api_projects', 'uses' => 'Api\ProjectController@getData'));
 });
