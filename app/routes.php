@@ -36,8 +36,8 @@ $optionsBack = array(
 );
 Route::group($optionsBack, function()
 {
+    Route::get('/projects', array('as' => 'api_projects', 'uses' => 'Dashboard\ProjectController@getData'));
 
-    Route::get('/projects', array('as' => 'api_projects', 'uses' => 'Api\ProjectController@getData'));
 //    Route::get('/dashboard', 'HomeController@showDashboard');
 //    //Blog
 //
@@ -63,8 +63,8 @@ Route::group($optionsBack, function()
 //
 //    Route::get('/projects/data-json/{pk}', array('as' => 'admin_projects_data_json', 'uses' => 'Dashboard\ProjectController@getData'));
 //    Route::get('/projects/data-json/photos/{pk}', array('as' => 'admin_projects_data_photo_json', 'uses' => 'Dashboard\ProjectController@getPhotos'));
-//
-//
+
+
 
 });
 
