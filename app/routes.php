@@ -31,7 +31,7 @@ Route::group($optionsFront, function()
 // */
 
 $optionsBack = array(
-//    'before' => 'auth',
+    'before' => 'auth',
     'prefix' => 'admin'
 );
 Route::group($optionsBack, function()
@@ -79,5 +79,5 @@ $optionsAppi = array(
 Route::group($optionsAppi, function()
 {
 
-    Route::get('/projects', array('as' => 'api_projects', 'uses' => 'Api\ProjectController@getData'));
+    Route::get('/projects', 'Api\ProjectController@getData');
 });
