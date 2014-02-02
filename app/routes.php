@@ -37,6 +37,7 @@ $optionsBack = array(
 Route::group($optionsBack, function()
 {
     Route::get('/projects', array('as' => 'api_projects', 'uses' => 'Dashboard\ProjectController@getData'));
+    Route::get('/projects2', array('as' => 'api_projects2', 'uses' => 'Api\ProjectController@getData'));
 
 //    Route::get('/dashboard', 'HomeController@showDashboard');
 //    //Blog
