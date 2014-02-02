@@ -31,7 +31,7 @@ Route::group($optionsFront, function()
 // */
 
 $optionsBack = array(
-    'before' => 'auth',
+//    'before' => 'auth',
     'prefix' => 'admin'
 );
 Route::group($optionsBack, function()
@@ -73,7 +73,7 @@ Route::group($optionsBack, function()
 // |--------------------------------------------------------------------------
 // */
 $optionsAppi = array(
-    'prefix' => 'api'
+    'prefix' => 'appi'
 );
 
 Route::group($optionsAppi, function()
