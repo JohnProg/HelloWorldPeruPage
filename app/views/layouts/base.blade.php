@@ -137,9 +137,9 @@
                             HelloWorldPerú
                         </a>
                     </div>
-                    
+                     
                 </div>
-                <div id="google_translate_element"></div>   
+                <div id="google_translate_element"></div> 
             </div>
         
         </footer>
@@ -153,9 +153,13 @@
     <script src="https://apis.google.com/js/platform.js"></script>
     <script type="text/javascript" src="js/social.js"></script>
     <script type="text/javascript">
-function googleTranslateElementInit() {
-  new google.translate.TranslateElement({pageLanguage: 'es', layout: google.translate.TranslateElement.InlineLayout.SIMPLE, autoDisplay: false}, 'google_translate_element');
-}
-</script><script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'es', 
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE, 
+                autoDisplay: false}, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
         
  </html>
