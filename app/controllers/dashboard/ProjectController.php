@@ -12,7 +12,6 @@ use File;
 use Response;
 use View;
 use path;
-use Resonse;
 
 class ProjectController extends BaseController {
 
