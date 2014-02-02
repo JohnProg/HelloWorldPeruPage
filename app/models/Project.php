@@ -3,6 +3,8 @@
 class Project extends Eloquent {
     protected $table = 'projects';
 
+    protected $guarded = 'aa';
+
     public function get_main_image()
     {
         $photo = Photo::where('object_id', '=', $this->id)

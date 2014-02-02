@@ -73,11 +73,11 @@ Route::group($optionsBack, function()
 // |--------------------------------------------------------------------------
 // */
 $optionsAppi = array(
-    'prefix' => 'appi'
+    'prefix' => 'api'
 );
 
 Route::group($optionsAppi, function()
 {
 
-    Route::get('/projects', array('as' => 'appi_projects', 'uses' => 'Appi\ProjectController@getData'));
+    Route::get('/projects', array('as' => 'api_projects', 'uses' => 'Api\ProjectController@getData'));
 });
