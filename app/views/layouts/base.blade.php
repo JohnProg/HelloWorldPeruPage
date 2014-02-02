@@ -5,6 +5,8 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
         
+        <meta name="google-translate-customization" content="8e4d90bf7ef103bb-2fd5a6c074901d93-g270ecfa4bf6c4f7d-16"></meta>
+
 		<title>Hello World Peru</title>
 		<meta name="description" content="">
 		<meta name="keywords" content="">
@@ -20,7 +22,7 @@
 		<link rel="stylesheet" type="text/css" href="css/style.css">
         @yield('styles')
         <!-- End CSS Files -->
-         
+
 	</head>
     
 	<body>
@@ -137,7 +139,7 @@
                     </div>
                     
                 </div>
-                
+                <div id="google_translate_element"></div>   
             </div>
         
         </footer>
@@ -150,4 +152,10 @@
     <div id="fb-root"></div>
     <script src="https://apis.google.com/js/platform.js"></script>
     <script type="text/javascript" src="js/social.js"></script>
+    <script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'es', layout: google.translate.TranslateElement.InlineLayout.SIMPLE, autoDisplay: false}, 'google_translate_element');
+}
+</script><script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+        
  </html>
