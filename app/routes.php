@@ -8,8 +8,6 @@
 $optionsFront = array();
 Route::group($optionsFront, function()
 {
-
-    Route::get('/projects', array('as' => 'api_projects', 'uses' => 'Api\ProjectController@getData'));
     //Home
     Route::get('/', array('as'=>'home', 'uses'=>'HomeController@getIndex'));
     Route::post('/contact', 'ContactController@postContactCreate');
@@ -39,6 +37,7 @@ $optionsBack = array(
 Route::group($optionsBack, function()
 {
 
+    Route::get('/projects', array('as' => 'api_projects', 'uses' => 'Api\ProjectController@getData'));
     Route::get('/dashboard', 'HomeController@showDashboard');
     //Blog
 
