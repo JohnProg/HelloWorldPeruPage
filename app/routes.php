@@ -46,7 +46,7 @@ Route::group($optionsBack, function()
 //    Route::post('/blog/create', 'blogController@createOneArticle');
 //
 //    //Messages
-//    Route::get('/messages', array('as' => 'admin_messages', 'uses' => 'Dashboard\ContactController@getListComment'));
+    Route::get('/messages', array('as' => 'admin_messages', 'uses' => 'Dashboard\ContactController@getListComment'));
 //    Route::get('/messages/delete/{pk}', array('as' => 'admin_messages_delete', 'uses' => 'Dashboard\ContactController@getDeleteComment'));
 //
 //    //Projects

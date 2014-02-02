@@ -1,5 +1,6 @@
 <?php
 namespace Dashboard;
+
 use BaseController;
 use Project;
 use Redirect;
