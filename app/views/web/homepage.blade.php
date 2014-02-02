@@ -266,9 +266,7 @@
                         </div>
                         <div class="content">
                             <div class="info">
-                                <p>Estudiante del 7 ciclo de la carrera Ingenieria de Sistemas en la Universidad Autonoma del Peru.</p>
-                                <p>Amante de python, java y javascript.</p>
-                                <p>Me encanta jugar pokemon y veo videos de estrategia en youtube!</p>
+                                <p>Estudiante del 7mo ciclo de Ingenieria de Sistemas en la Universidad Autonoma del Peru.</p>
                             </div>
                             <img src="img/team-4.jpg" alt="">
                         </div>
