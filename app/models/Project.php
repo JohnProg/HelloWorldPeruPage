@@ -16,14 +16,26 @@ class Project extends Eloquent {
 
     public function get_all_images()
     {
-//        $photos = Photo::where('object_id', '=', $this->id)
-//            ->where('model', '=','projects')->get()->toArray();
-//        foreach ($photos as $photo)
-//        {
-//
-//            $data = $photo->photos_details();
-//        }
-//        return $data;
+        /*
+         *  {
+         *      id = int
+         *      photo_id = int
+         *      file = file
+         *      thumbnails = []
+         *  },
+         */
+        $data = array();
+        $photos = Photo::where('object_id', '=', $this->id)
+            ->where('model', '=','projects')->get();
+
+        foreach ($photos as $photo)
+        {
+            $tmp['id'] = $photo->id;
+            $tmp['file'] = $photo->file;
+            $tmp['thumbnails'] = $photo->photos_details()->get()->toArray();
+            array_push($data,$tmp);
+        }
+        return $data;
     }
 
 }

@@ -66,3 +66,18 @@ Route::group($optionsBack, function()
 
 
 });
+
+// /*
+// |--------------------------------------------------------------------------
+// | Appi
+// |--------------------------------------------------------------------------
+// */
+$optionsAppi = array(
+    'prefix' => 'appi'
+);
+
+Route::group($optionsAppi, function()
+{
+
+    Route::get('/projects', array('as' => 'appi_projects', 'uses' => 'Appi\ProjectController@getData'));
+});

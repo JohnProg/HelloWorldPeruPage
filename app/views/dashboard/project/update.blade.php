@@ -69,7 +69,7 @@
             <!-- Three columns of text below the carousel -->
             <div class="row" ng-repeat="item in pagedItems[currentPage]" class="ng-cloak">
                 <div class="col-lg-3" >
-                    <img src="{[{ item.file }]}" alt="..." class="img-rounded">
+                    <img src="{[{ item.thumbnails[0].file }]}" alt="..." class="img-rounded">
                     <p><a class="btn btn-danger" href="{{ URL::to('admin/projects/photo/delete/') }}/{[{ item.id }]}" role="button">Delete</a></p>
                 </div><!-- /.col-lg-3 -->
             </div><!-- /.row -->
