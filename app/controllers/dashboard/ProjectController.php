@@ -73,7 +73,6 @@ class ProjectController extends BaseController {
         }
     }
 
-
     public function postUpload($id) {
 
         $input = Input::all();

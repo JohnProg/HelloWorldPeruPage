@@ -2,8 +2,10 @@
 
 @section('contenido')
 
+<div id="main-content" ng-app="homeApp">
+
 <!-- Sidebar Section -->
-<aside>
+    <aside>
 
     <nav id="toque_main_content" style="width: 50px;">
         <span class="button-option"><i class="fa fa-align-justify"></i></span>
@@ -109,13 +111,11 @@
 
     </section>
     <!-- End Services Section -->
-    
     <!-- Portfolio Section -->
-    <section id="portfolio">
+    <section id="portfolio" ng-controller="projectController" ng-init="init()">
          
         <div class="container">
-            
-            <div class="row text-center"> 
+            <div class="row text-center">
                 <div class="col-sm-12"> 
                     <h1 class="heading-large section-color-2">PORTAFOLIO</h1>
                 </div>
@@ -129,143 +129,33 @@
             
              <!-- Filter Buttons -->
             <ul id="filter-buttons">
-                <li class="filter active" data-filter="all">ALL</li>
-                <li class="filter" data-filter="web">WEB</li>
-                <li class="filter" data-filter="app">APP</li>
-                <li class="filter" data-filter="design">DESIGN</li>  
-                <li class="filter" data-filter="code">CODE</li>  
+                <li class="filter active" data-filter="{[{ option.id }]}" ng-repeat="option in options">{[{ option.name }]}</li>
+<!--                <li class="filter" data-filter="web">WEB</li>-->
+<!--                <li class="filter" data-filter="app">APP</li>-->
+<!--                <li class="filter" data-filter="design">DESIGN</li>-->
+<!--                <li class="filter" data-filter="2">CODE</li>-->
             </ul>
-            <!-- End Filter Buttons -->
 
-                            <!-- Portfolio Grid -->
+            <!-- End Filter Buttons -->
+            <!--  code, web, app, design -->
+            <!-- Portfolio Grid -->
             <ul id="gallery">
-                
-                <li class="mix code design grid-unit mix_all">
-                    <a href="portfolio/project-1/index.html" class="thumbnail">
-                        <img src="img/ipad3_1885-1_1x.jpg" alt="">
+<!--                proyectos: {[{ projects }]}-->
+<!--                <div ng-repeat="item in projects">-->
+                <li class="mix 0 {[{ item.type }]} design grid-unit mix_all" ng-repeat="item in projects" data-test="{[{ item.title }]}">
+                    <a href="{[{ item.url }]}" class="thumbnail">
+                        <img src="{[{ item.photos[0].thumbnails[0].file }]}" alt="">
                         <div class="mask">
                             <div class="meta">
                                 <div class="words">
-                                    <span class="title">Yule Log</span>
-                                    <span class="role">Design / Code</span>
+                                    <span class="title">{[{ item.title }]}</span>
+                                    <span class="role">{[{ item.description }]}</span>
                                 </div>
                             </div>
                         </div>
                     </a>
                 </li>
-                
-                <li class="mix web code grid-unit mix_all">
-                    <a href="portfolio/project-1/index.html" class="thumbnail">
-                        <img src="img/sqqssq_1x.jpg" alt="">
-                        <div class="mask">
-                            <div class="meta">
-                                <div class="words">
-                                    <span class="title">Earth</span>
-                                    <span class="role">Web / Code</span>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </li> 
-                
-                <li class="mix app code grid-unit mix_all">
-                    <a href="portfolio/project-1/index.html" class="thumbnail">
-                        <img src="img/111111aaaa_1x.jpg" alt="">
-                        <div class="mask">
-                            <div class="meta">
-                                <div class="words">
-                                    <span class="title">Hobbit Holes</span>
-                                    <span class="role">App / Code</span>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </li> 
-                
-                <li class="mix web app code grid-unit mix_all">
-                    <a href="portfolio/project-1/index.html" class="thumbnail">
-                        <img src="img/22222_1x.jpg" alt="">
-                        <div class="mask">
-                            <div class="meta">
-                                <div class="words">
-                                    <span class="title">Out of the Shire</span>
-                                    <span class="role">Web / App / Code</span>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </li> 
-                
-                <li class="mix web design grid-unit mix_all">
-                    <a href="portfolio/project-1/index.html" class="thumbnail">
-                        <img src="img/2s2s2s_1x.jpg" alt="">
-                        <div class="mask">
-                            <div class="meta">
-                                <div class="words">
-                                    <span class="title">Map</span>
-                                    <span class="role">Web / Design</span>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </li> 
-                
-                <li class="mix app design grid-unit mix_all">
-                    <a href="portfolio/project-1/index.html" class="thumbnail">
-                        <img src="img/kaboom_1x.jpg" alt="">
-                        <div class="mask">
-                            <div class="meta">
-                                <div class="words">
-                                    <span class="title">Kaboom!</span>
-                                    <span class="role">App / Design</span>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </li> 
-                
-                <li class="mix web design grid-unit mix_all">
-                    <a href="portfolio/project-1/index.html" class="thumbnail">
-                        <img src="img/1b_1x.jpg" alt="">
-                        <div class="mask">
-                            <div class="meta">
-                                <div class="words">
-                                    <span class="title">Driver</span>
-                                    <span class="role">Web / Design</span>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </li> 
-                
-                <li class="mix app code design grid-unit mix_all">
-                    <a href="portfolio/project-1/index.html" class="thumbnail">
-                        <img src="img/22222_1x.jpg" alt="">
-                        <div class="mask">
-                            <div class="meta">
-                                <div class="words">
-                                    <span class="title">Union Square</span>
-                                    <span class="role">App / Code / Design</span>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </li> 
-                
-                <li class="mix app web grid-unit mix_all">
-                    <a href="portfolio/project-1/index.html" class="thumbnail">
-                        <img src="img/2s2s2s_1x.jpg" alt="">
-                        <div class="mask">
-                            <div class="meta">
-                                <div class="words">
-                                    <span class="title">Treasure Map</span>
-                                    <span class="role">Web / App</span>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </li> 
-                
+<!--                </div>-->
             </ul>
             <!-- End Portfolio Grid -->                
         </div>
@@ -376,9 +266,7 @@
                         </div>
                         <div class="content">
                             <div class="info">
-                                <p>Estudiante del 7 ciclo de la carrera Ingenieria de Sistemas en la Universidad Autonoma del Peru.</p>
-                                <p>Amante de python, java y javascript.</p>
-                                <p>Me encanta jugar pokemon y veo videos de estrategia en youtube!</p>
+                                <p>Estudiante del 7mo ciclo de Ingenieria de Sistemas en la Universidad Autonoma del Peru.</p>
                             </div>
                             <img src="img/team-4.jpg" alt="">
                         </div>
@@ -460,6 +348,8 @@
     
     </section>
     <!-- End Contact Section -->
+
+</div>
 @stop
 
 @section('script')
@@ -468,5 +358,17 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery.mixitup.js"></script>
     <script src="js/index.js"></script>
+    <script src="{{ URL::asset('js/angular.min.js') }}"></script>
     <!-- End Scripts Section -->
+    {{ HTML::script('js/modules/home/app.js') }}
+    {{ HTML::script('js/modules/home/controllers/projectController.js') }}
+    {{ HTML::script('js/modules/home/factories/projectFactory.js') }}
+
+    <script>
+        angular.module('homeApp').value('homeUrls', {
+            projectUrl: "{{ URL::route('api_projects'); }}"
+        });
+
+    </script>
+
 @stop

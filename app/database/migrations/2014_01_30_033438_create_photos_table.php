@@ -14,6 +14,8 @@ class CreatePhotosTable extends Migration {
 	{
 		Schema::create('photos', function(Blueprint $table)
 		{
+            $table->engine ='InnoDB';
+
             $table->increments('id');
             $table->string('model', 30);
             $table->smallInteger('object_id');
