@@ -7,7 +7,28 @@ html {
     text-align: center;
     z-index: 9;
     position: relative;
+    width: 40%;
+    margin: 15% auto;
+    padding: 1% 6% 2% 6%;
+    border-radius: 5px;
+    box-shadow: 1px 3px 2px rgba(0, 0, 0, 0.27);
+    background: rgba(255, 255, 255, 0.88);
 }
 .navbar, .overlay{
     display: none !important;
+}
+.input-group:first-child {
+    margin: 3em 0 0 0;
+}
+input[type="submit"] {
+    padding: 5% 40%;
+    margin: 8% 0 2% 0;
+    -webkit-appearance: none;
+    background: white;
+    border: none;
+    box-shadow: 2px 2px 0 rgba(0,0,0,0.1);
+    font-size: 20px;
+}
+.input-group.first-error {
+    margin-bottom: 0.8em;
 }

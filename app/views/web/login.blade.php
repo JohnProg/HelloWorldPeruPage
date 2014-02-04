@@ -2,23 +2,20 @@
 {{ HTML::style('css/login.css') }}
 @section('contenido')
 	<section class="auth">
-		{{ Form::open(array('url' => 'login', 'class'=>'ajax')) }}
+	{{ Form::open(array('url' => 'login', 'class'=>'ajax')) }}
 		<h1>Login</h1>
 
 		<!-- if there are login errors, show them here -->
-		
-
-		<p>
-			{{ Form::text('email', Input::old('email'), array('placeholder' => 'Your email')) }}
-			<p>{{ $errors->first('email') }}</p>
-		</p>
-
-		<p>
-			{{ Form::password('password', array('placeholder' => 'Your password')) }}
-			<p>
-				{{ $errors->first('password') }}
-			</p>
-		</p>
+		<div class='input-group first-error'>
+			<span class='input-group-addon'><i class='fa fa-envelope'></i></span>
+			{{ Form::text('email', Input::old('email'), array('placeholder' => 'Your email', 'class'=> 'form-control')) }}
+			<div class='msm email'></div>
+		</div>
+		<div class='input-group'>
+			<span class='input-group-addon'><i class='fa fa-user'></i></span>
+			{{ Form::password('password', array('placeholder' => 'Your password', 'class'=> 'form-control')) }}
+			<div class='msm password'></div>
+		</div>
 
 		<p>{{ Form::submit('Submit!') }}</p>
 	{{ Form::close() }}

@@ -574,7 +574,7 @@ nav {
     z-index: 999;
 }
 
-#contact-form input[type=text], .contactForm textarea {
+#contact-form input[type=text], #contact-form textarea {
     background: rgba(227, 231, 228, 1);
     border: 0;
     font-size: 16px;
@@ -586,7 +586,7 @@ nav {
     border-radius: 3px;
     box-shadow: 3px 3px 2px rgba(0, 0, 0,0.2);
 }
-#contact-form input[type=text]:focus, .contactForm textarea:focus {
+#contact-form input[type=text]:focus, #contact-form textarea:focus {
     background: rgba(201, 201, 201, 1);    
     box-shadow: none;
     -moz-box-shadow: none;

@@ -107,7 +107,7 @@ return array(
 		'Illuminate\View\ViewServiceProvider',
 		'Illuminate\Workbench\WorkbenchServiceProvider',
         'Intervention\Image\ImageServiceProvider',
-		// 'Way\Generators\GeneratorsServiceProvider',
+		// 'Way\Generators\GeneratorsServiceProvider'
 
 	),
 

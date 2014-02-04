@@ -332,7 +332,7 @@
                                 </div>
                                 <div class="span6">
                                     <div class="field message">
-                                        {{ Form::textarea('message', Input::old('message'), array('class'=>'cform-textarea', 'placeholder'=>'Mensaje', 'cols'=>'40', 'rows'=>'10', 'maxlength'=>'250' )) }}                                        <div class="validation">
+                                        {{ Form::textarea('message', Input::old('message'), array('class'=>'cform-textarea', 'placeholder'=>'Mensaje', 'maxlength'=>'250' )) }}                                        <div class="validation">
                                         {{ $errors->first('message', '<span class="text-error">:message</span>') }}
                                         </div>
                                     </div>

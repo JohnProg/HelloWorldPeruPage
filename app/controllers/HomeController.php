@@ -22,27 +22,21 @@ class HomeController extends BaseController {
 			$messages = array(
 				'required'=> 'Campo Obligatorio'
 			);
-			$validator = Validator::make(Input::all(), $rules, $messages);
+
+			$validator = Validator::make(array('email' => Input::get('email'), 'password' => Input::get('password') ), true, $rules, $messages);
 
 			if ($validator->fails()) {
 				$data = array('status' => false,'msg' => $validator->getMessageBag()->toArray());
 				return Response::json($data); 
 			} else {
-
-				$userdata = array(
-					'email' 	=> Input::get('email'),
-					'password' 	=> Input::get('password')
-				);
-
-				if (Auth::attempt($userdata)) {					
-					$data = array('status'=>true,'msg'=>'Bienvenido!');
+			    // la función attempt se encarga automáticamente se hacer la encriptación de la clave para ser comparada con la que esta en la base de datos. 
+			    if (Auth::attempt( array('email' => Input::get('email'), 'password' => Input::get('password') ), true )){
+			        $data = array('status'=>true,'msg'=>'Bienvenido!');
 					return Response::json($data);
-
-				} else {	 	
-					$data = array('status'=>false,'msg'=>'Datos incorrectos!');
+			    }else{
+			        $data = array('status'=>false,'msg'=>'Datos incorrectos!');
 					return Resonse::json($data);
-
-				}
+			    }
 
 			}
 		}

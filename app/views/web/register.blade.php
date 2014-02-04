@@ -5,22 +5,15 @@
 		{{ Form::open(array('url' => 'register', 'class'=>'ajax')) }}
 		<h1>Register</h1>
 
-		<!-- if there are login errors, show them here -->
-		
+		<div class='input-group first-error'>
+			<span class='input-group-addon'><i class='fa fa-envelope'></i></span>
+			{{ Form::text('email', Input::old('email'), array('placeholder' => 'john_js@agmail.com', 'class'=> 'form-control')) }}
+		</div>
 
-		<p>
-			{{ Form::label('email', 'Email Address') }}
-			{{ Form::text('email', Input::old('email'), array('placeholder' => 'john_js@agmail.com')) }}
-			<p>{{ $errors->first('email') }}</p>
-		</p>
-
-		<p>
-			{{ Form::label('password', 'Password') }}
-			{{ Form::password('password') }}
-			<p>
-				{{ $errors->first('password') }}
-			</p>
-		</p>
+		<div class='input-group'>
+			<span class='input-group-addon'><i class='fa fa-user'></i></span>
+			{{ Form::password('password', array('placeholder'=>'******', 'class'=> 'form-control')) }}
+		</div>
 
 		<p>{{ Form::submit('Submit!') }}</p>
 	{{ Form::close() }}

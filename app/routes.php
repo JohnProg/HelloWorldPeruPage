@@ -17,8 +17,8 @@ Route::group($optionsFront, function()
 	Route::get('/blog/{id}', 'blogController@showOneArticle');
     
     //Login
-    Route::get('/login', 'HomeController@showLogin');
-    Route::post('/login', 'HomeController@doLogin');
+    Route::get('login', 'HomeController@showLogin');
+    Route::post('login', 'HomeController@doLogin');
     Route::get('/logout', 'HomeController@doLogout');
 
     //Rgister

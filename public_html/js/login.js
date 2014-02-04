@@ -1,5 +1,5 @@
 $(document).on('ready', function(){
-	var form = $('.ajax');
+	var form = $('.ajax');debugger;
 	var url = form.attr('action');
 	form.on('submit', function(){
 		$.ajax({
@@ -12,7 +12,14 @@ $(document).on('ready', function(){
 			success: function(data){
 				debugger;
 				if(data.status){
+					location.href ='admin/dashboard';
 					console.log(data.msg);
+					if(data.msg.password != undefined){
+						$('.password').html(data.msg.password);
+					}
+					if(data.msg.email != undefined){
+						$('.email').html(data.msg.email);
+					}
 				}
 				else{
 					console.log(data.msg);
