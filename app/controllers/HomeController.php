@@ -14,28 +14,23 @@ class HomeController extends BaseController {
 	public function doLogin()
 	{
 		if(Request::ajax()){
+
 			$rules = array(
 				'email'    => 'required|email', // make sure the email is an actual email
 				'password' => 'required|alphaNum|min:3' // password can only be alphanumeric and has to be greater than 3 characters
 			);
 
-			$messages = array(
-				'required'=> 'Campo Obligatorio'
-			);
-
-			$validator = Validator::make(array('email' => Input::get('email'), 'password' => Input::get('password') ), true, $rules, $messages);
-
+            $validator = Validator::make(Input::all(), $rules);
 			if ($validator->fails()) {
 				$data = array('status' => false,'msg' => $validator->getMessageBag()->toArray());
-				return Response::json($data); 
+				return Response::json($data);
 			} else {
-			    // la función attempt se encarga automáticamente se hacer la encriptación de la clave para ser comparada con la que esta en la base de datos. 
 			    if (Auth::attempt( array('email' => Input::get('email'), 'password' => Input::get('password') ), true )){
 			        $data = array('status'=>true,'msg'=>'Bienvenido!');
 					return Response::json($data);
 			    }else{
 			        $data = array('status'=>false,'msg'=>'Datos incorrectos!');
-					return Resonse::json($data);
+					return Response::json($data);
 			    }
 
 			}

@@ -4,7 +4,6 @@ angular.module('listApp').factory("listFactory",['$http','$rootScope', function(
     factory.getData = function(urlJson) {
         var aaa =  $http.get(urlJson, { cache: true })
             .then(function(response) {
-                debugger;
                 if(response.status == 200) {
                     return response.data;
                 } else {

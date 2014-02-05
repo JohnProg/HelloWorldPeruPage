@@ -1,5 +1,5 @@
 $(document).on('ready', function(){
-	var form = $('.ajax');debugger;
+	var form = $('.ajax');
 	var url = form.attr('action');
 	form.on('submit', function(){
 		$.ajax({
@@ -10,7 +10,6 @@ $(document).on('ready', function(){
 				console.log('...');
 			},
 			success: function(data){
-				debugger;
 				if(data.status){
 					location.href ='admin/dashboard';
 					console.log(data.msg);

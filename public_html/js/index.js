@@ -18,7 +18,6 @@ function init(){
 	$('.text-menu').hide();
 
 	$('.button-option').on('click',function(event){   
-	debugger;                 
 	    event.preventDefault();
 	    if ($('#toque_main_content').hasClass("see_info") ) {
 	        //$("#toque_main_content").stop().animate({width:50}, 500);          
