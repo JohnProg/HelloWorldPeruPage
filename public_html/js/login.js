@@ -9,7 +9,7 @@ $(document).on('ready', function(){
 			beforeSend: function(){
 				console.log('...');
 			},
-			success: function(data){
+			success: function(data){debugger;
 				if(data.status){
 					location.href ='admin/dashboard';
 					console.log(data.msg);

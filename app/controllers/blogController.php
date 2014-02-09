@@ -52,5 +52,4 @@ class blogController extends BaseController {
 		$post = Post::where('slug', $slug)->first();
 		
 	}
-
 }

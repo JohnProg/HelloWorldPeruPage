@@ -15,6 +15,7 @@ Route::group($optionsFront, function()
     //Blog
 	Route::get('/blog', 'blogController@showAllPosts');    
 	Route::get('/blog/{slug}', array('as'=>'show_post', 'uses'=>'blogController@showPost'));
+
     
     //Login
     Route::get('login', 'HomeController@showLogin');
