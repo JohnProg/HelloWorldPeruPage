@@ -43,6 +43,10 @@ Route::group($optionsBack, function()
     //Blog
     Route::get('/blog/create', 'blogController@createPost');
     Route::post('/blog/create', array('as'=> 'blog_create', 'uses' => 'blogController@createPost'));
+
+    Route::get('/blog/post/{pk}', array('as'=>'post_update', 'uses'=>'blogController@updatePost'));
+    Route::post('/blog/post/{pk}', array('as'=>'post_update', 'uses'=>'blogController@updatePost'));
+
     Route::get('blog/posts', array('as'=>'admin_posts', 'uses'=>'blogController@showAllPosts'));
 
 

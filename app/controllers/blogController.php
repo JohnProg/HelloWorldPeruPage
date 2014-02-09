@@ -41,7 +41,7 @@ class blogController extends BaseController {
 			$post->slug = $slug;
 			$post->content = $content;
 			$post->save();
-			return Redirect::route('admin_messages');
+			return Redirect::route('admin_posts');
 		}else{
 			return View::make('../blog.createarticle');		
 		}
@@ -52,4 +52,26 @@ class blogController extends BaseController {
 		$post = Post::where('slug', $slug)->first();
 		
 	}
+
+	public function updatePost($id){
+
+		$post = Post::find($id);
+
+		if (Request::isMethod('post')){
+			$title = Input::get('title');
+			$slug = Str::slug($title);
+			$content = Input::get('content');
+			$user = Auth::user();
+
+			$post->title = $title;
+			$post->user_id = $user->id;
+			$post->slug = $slug;
+			$post->content = $content;
+			$post->save();
+			return Redirect::route('admin_posts');
+		}else{
+			return View::make('../blog.post_update')
+            	->with('post', $post);
+		}
+    }
 }
