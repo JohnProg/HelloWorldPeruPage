@@ -1,13 +1,17 @@
-<!doctype html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Document</title>
-</head>
-<body>
-	
-<h1>DEtale</h1>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, asperiores, a, quae, autem minima dolor iusto unde dignissimos voluptatibus voluptate quam animi odio quis velit ut soluta delectus recusandae cumque.</p>
+@extends('blog.blogbase')
 
-</body>
-</html>
+@section('contenido')	
+
+	<section class='container'>
+		{{ HTML::link('blog', 'Volver'); }}
+		<article>
+			<figure>
+				<img src="{{  $article->url_image }}" alt="">
+			</figure>
+			<header> 
+				<h2>{{ $article->titulo }}</h2>
+			</header>
+			<p> {{ $article->texto }} </p>
+		</article>
+	</section>
+@stop

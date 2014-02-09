@@ -32,3 +32,17 @@ input[type="submit"] {
 .input-group.first-error {
     margin-bottom: 0.8em;
 }
+@media (max-width: 720px){
+    .auth {
+        width: 80%;
+    }
+    input[type="submit"] {
+        padding: 5% 25%;
+        text-align: center;
+    }
+}
+@media (max-width: 480){
+    .auth {
+        width: 90%;
+    }
+}

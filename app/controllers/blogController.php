@@ -16,16 +16,12 @@ class blogController extends BaseController {
 	*/
 	public function showAllArticles()
 	{	
-		return View::make('../blog.listarticles');
+		$articles = Articles::all();
+		return View::make('blog.listarticles', array('articles' => $articles));
 	}
 
-	public function createOneArticle(){
-		return View::make('../blog.listarticles');	
+	public function showOneArticle($id){
+		$article = Articles::find($id);
+		return View::make('blog.detallearticulo', array('article'=>$article));	
 	}
-
-	public function showOneArticle($id)
-	{
-		return $id;
-	}
-
 }
