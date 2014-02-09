@@ -1,5 +1,11 @@
 <?php
 
+use Auth;
+use Input;
+use Post;
+use Redirect;
+use Str;
+
 class blogController extends BaseController {
 
 	/*
@@ -14,18 +20,37 @@ class blogController extends BaseController {
 	|	Route::get('/', 'HomeController@showWelcome');
 	|
 	*/
-	public function showAllArticles()
+	public function showAllPosts()
 	{	
-		return View::make('../blog.listarticles');
+		$list = Post::paginate(5);
+        return View::make('../blog.listarticles')->with('posts',$list);
 	}
 
-	public function createOneArticle(){
-		return View::make('../blog.createarticle');	
+	public function createPost(){
+
+		if (Request::isMethod('post')){
+
+			$title = Input::get('title');
+			$slug = Str::slug($title);
+			$content = Input::get('content');
+			$user = Auth::user();
+
+			$post = new Post;
+			$post->title = $title;
+			$post->user_id = $user->id;
+			$post->slug = $slug;
+			$post->content = $content;
+			$post->save();
+			return Redirect::route('admin_messages');
+		}else{
+			return View::make('../blog.createarticle');		
+		}
 	}
 
-	public function showOneArticle($id)
+	public function showPost($slug)
 	{
-		return $id;
+		$post = Post::where('slug', $slug)->first();
+		
 	}
 
 }

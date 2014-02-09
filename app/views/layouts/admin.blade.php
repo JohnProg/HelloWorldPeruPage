@@ -28,6 +28,7 @@
                 <li class="active"><a href="#">Home</a></li>
                 <li><a href="{{ URL::route('admin_messages'); }}">Mensajes</a></li>
                 <li><a href="{{ URL::route('admin_projects'); }}">Proyectos</a></li>
+                <li><a href="{{ URL::route('admin_posts'); }}">Blog</a></li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
                     <ul class="dropdown-menu">
