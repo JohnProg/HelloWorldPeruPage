@@ -50,6 +50,7 @@ class blogController extends BaseController {
 	public function showPost($slug)
 	{
 		$post = Post::where('slug', $slug)->first();
+		return View::make('../blog.detallearticulo')->with('post', $post);
 		
 	}
 
