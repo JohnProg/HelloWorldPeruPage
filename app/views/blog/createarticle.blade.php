@@ -1,9 +1,12 @@
-@extends('layouts.base')
-{{ HTML::style('css/login.css') }}
-@section('contenido')
-	<section class="auth">
-	{{ Form::open(array('method' => 'POST')) }}
-		<h1>Login</h1>
+@extends('layouts.admin')
+
+@section('content')
+<div class="page-header">
+    <h1>Crear Post</h1>
+</div>
+
+    <div class="tab-pane active" id="information">
+        {{ Form::open(array('method' => 'POST')) }}
 
 		<!-- if there are login errors, show them here -->
 		<div class='input-group first-error'>
@@ -14,10 +17,11 @@
 		</div>
 
 		<p>{{ Form::submit('Submit!') }}</p>
-	{{ Form::close() }}
-	</section>	
+		{{ Form::close() }}
+
 @stop
-@section('script')
+
+@section('extra_scripts')
 	<!-- Scripts Section -->
     <script src="/js/jquery.1.10.1.js"></script>
     <script src="/packages/ckeditor/ckeditor.js"></script>
