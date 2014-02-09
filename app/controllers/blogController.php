@@ -74,4 +74,11 @@ class blogController extends BaseController {
             	->with('post', $post);
 		}
     }
+
+    public function getDeletePost($id){
+
+        $post = Post::find($id);
+        $post->delete();
+        return Redirect::route('admin_posts');
+    }
 }

@@ -23,7 +23,7 @@
         <tr>
             <td>{{ $post->title }}</td>
             <td>
-                <a href="{{ URL::route('admin_projects_delete', $post->id ); }}">Eliminar</a> |
+                <a href="{{ URL::route('post_delete', $post->id ); }}">Eliminar</a> |
                 <a href="{{ URL::route('post_update', $post->id ); }}">Actualizar</a>
             </td>
         </tr>
