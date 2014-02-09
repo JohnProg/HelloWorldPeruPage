@@ -20,7 +20,7 @@ class blogController extends BaseController {
 	}
 
 	public function createOneArticle(){
-		return View::make('../blog.listarticles');	
+		return View::make('../blog.createarticle');	
 	}
 
 	public function showOneArticle($id)

@@ -40,7 +40,7 @@ Route::group($optionsBack, function()
     //Blog
 
     Route::get('/blog/create', 'blogController@createOneArticle');
-    Route::post('/blog/create', 'blogController@createOneArticle');
+    Route::post('/blog/create', array('as'=> 'blog_create', 'uses' => 'blogController@createOneArticle'));
 
     //Messages
     Route::get('/messages', array('as' => 'admin_messages', 'uses' => 'Dashboard\ContactController@getListComment'));
