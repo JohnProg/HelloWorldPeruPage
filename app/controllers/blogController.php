@@ -1,11 +1,5 @@
 <?php
 
-use Auth;
-use Input;
-use Post;
-use Redirect;
-use Str;
-
 class blogController extends BaseController {
 
 	/*

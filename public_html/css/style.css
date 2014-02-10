@@ -989,3 +989,6 @@ footer .logo {
     color: white;
     opacity: .5;
 }
+[ng\:cloak], [ng-cloak], .ng-cloak {
+    display: none !important;
+}

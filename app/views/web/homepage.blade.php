@@ -129,7 +129,7 @@
             
              <!-- Filter Buttons -->
             <ul id="filter-buttons">
-                <li class="filter active" data-filter="{[{ option.id }]}" ng-repeat="option in options">{[{ option.name }]}</li>
+                <li class="filter active" data-filter="{[{ option.id }]}" ng-repeat="option in options" ng-cloak >{[{ option.name }]}</li>
 <!--                <li class="filter" data-filter="web">WEB</li>-->
 <!--                <li class="filter" data-filter="app">APP</li>-->
 <!--                <li class="filter" data-filter="design">DESIGN</li>-->
@@ -139,10 +139,10 @@
             <!-- End Filter Buttons -->
             <!--  code, web, app, design -->
             <!-- Portfolio Grid -->
-            <ul id="gallery">
+            <ul id="gallery" >
 <!--                proyectos: {[{ projects }]}-->
 <!--                <div ng-repeat="item in projects">-->
-                <li class="mix 0 {[{ item.type }]} design grid-unit mix_all" ng-repeat="item in projects" data-test="{[{ item.title }]}">
+                <li class="mix 0 {[{ item.type }]} design grid-unit mix_all" ng-repeat="item in projects" data-test="{[{ item.title }]}" ng-cloak >
                     <a href="{[{ item.url }]}" class="thumbnail">
                         <img src="{[{ item.photos[0].thumbnails[0].file }]}" alt="">
                         <div class="mask">

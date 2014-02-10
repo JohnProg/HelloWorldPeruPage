@@ -25,6 +25,9 @@ Route::group($optionsFront, function()
     //Rgister
     Route::get('/register', 'HomeController@showRegister');
 
+    //Test
+    Route::get('/test', 'HomeController@showTest');
+
 });
 // /*
 // |--------------------------------------------------------------------------
@@ -71,8 +74,6 @@ Route::group($optionsBack, function()
 
     Route::get('/projects/data-json/{pk}', array('as' => 'admin_projects_data_json', 'uses' => 'Dashboard\ProjectController@getData'));
     Route::get('/projects/data-json/photos/{pk}', array('as' => 'admin_projects_data_photo_json', 'uses' => 'Dashboard\ProjectController@getPhotos'));
-
-
 
 });
 
