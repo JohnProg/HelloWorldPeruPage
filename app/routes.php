@@ -13,8 +13,9 @@ Route::group($optionsFront, function()
     Route::post('/contact', 'ContactController@postContactCreate');
 
     //Blog
-	Route::get('/blog', 'blogController@showAllArticles');    
-	Route::get('/blog/{id}', 'blogController@showOneArticle');
+	Route::get('/blog', 'blogController@showAllPosts');    
+	Route::get('/blog/{slug}', array('as'=>'show_post', 'uses'=>'blogController@showPost'));
+
     
     //Login
     Route::get('login', 'HomeController@showLogin');
@@ -23,6 +24,7 @@ Route::group($optionsFront, function()
 
     //Rgister
     Route::get('/register', 'HomeController@showRegister');
+
 });
 // /*
 // |--------------------------------------------------------------------------
@@ -37,10 +39,18 @@ $optionsBack = array(
 Route::group($optionsBack, function()
 {
     Route::get('/dashboard', 'HomeController@showDashboard');
+    
     //Blog
+    Route::get('/blog/create', 'blogController@createPost');
+    Route::post('/blog/create', array('as'=> 'blog_create', 'uses' => 'blogController@createPost'));
 
-    Route::get('/blog/create', 'blogController@createOneArticle');
-    Route::post('/blog/create', 'blogController@createOneArticle');
+    Route::get('/blog/post/update/{pk}', array('as'=>'post_update', 'uses'=>'blogController@updatePost'));
+    Route::post('/blog/post/update/{pk}', array('as'=>'post_update', 'uses'=>'blogController@updatePost'));
+
+    Route::get('/blog/post/delete/{pk}', array('as'=>'post_delete', 'uses'=>'blogController@getDeletePost'));
+
+    Route::get('blog/posts', array('as'=>'admin_posts', 'uses'=>'blogController@showAllPosts'));
+
 
     //Messages
     Route::get('/messages', array('as' => 'admin_messages', 'uses' => 'Dashboard\ContactController@getListComment'));
