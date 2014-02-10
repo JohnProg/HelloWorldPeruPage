@@ -20,11 +20,10 @@ class ProjectController extends BaseController {
         return View::make('dashboard.project.list')->with('projects',$list);
     }
 
-    public function getData() {
-//        $project = Project::find($pk);
-//        $project->photos = $project->get_all_images();
-//        return Response::json($project);
-        echo 'hola';
+    public function getData($pk) {
+        $project = Project::find($pk);
+        $project->photos = $project->get_all_images();
+        return Response::json($project);
     }
 
     public function getPhotos($pk) {

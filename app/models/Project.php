@@ -3,7 +3,12 @@
 class Project extends Eloquent {
     protected $table = 'projects';
 
-    protected $guarded = 'aa';
+    public function toArray()
+    {
+        $array = parent::toArray();
+        $array['main_image'] = $this->get_main_image();
+        return $array;
+    }
 
     public function get_main_image()
     {
