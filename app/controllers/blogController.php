@@ -14,6 +14,16 @@ class blogController extends BaseController {
 	|	Route::get('/', 'HomeController@showWelcome');
 	|
 	*/
+	public function showAllPostsUsers(){
+		$posts = Post::all();
+		return View::make('../blog/listAllArticles')->with('posts', $posts);
+	}
+
+	public function showOnePostsUsers($slug){
+		$post = Post::where('slug', $slug)->first();
+		return View::make('../blog.listOneArticle')->with('post', $post);
+	}
+
 	public function showAllPosts()
 	{	
 		$list = Post::paginate(5);
@@ -39,13 +49,6 @@ class blogController extends BaseController {
 		}else{
 			return View::make('../blog.createarticle');		
 		}
-	}
-
-	public function showPost($slug)
-	{
-		$post = Post::where('slug', $slug)->first();
-		return View::make('../blog.detallearticulo')->with('post', $post);
-		
 	}
 
 	public function updatePost($id){

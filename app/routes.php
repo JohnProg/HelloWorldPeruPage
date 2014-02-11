@@ -13,8 +13,8 @@ Route::group($optionsFront, function()
     Route::post('/contact', 'ContactController@postContactCreate');
 
     //Blog
-	Route::get('/blog', 'blogController@showAllPosts');    
-	Route::get('/blog/{slug}', array('as'=>'show_post', 'uses'=>'blogController@showPost'));
+	Route::get('/blog/list', 'blogController@showAllPostsUsers');    
+	Route::get('/blog/{slug}', 'blogController@showOnePostsUsers');
 
     
     //Login
