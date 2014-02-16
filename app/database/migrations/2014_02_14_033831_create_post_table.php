@@ -14,6 +14,8 @@ class CreatePostTable extends Migration {
 	{
 		Schema::create('post', function(Blueprint $table)
 		{
+			$table->engine = 'InnoDB';
+
 			$table->increments('id');
 			$table->integer('user_id')->unsigned();	
 			$table->foreign('user_id')
@@ -21,8 +23,10 @@ class CreatePostTable extends Migration {
       			  ->onDelete('cascade');
 			$table->string('title');
 			$table->string('slug');
-			$table->text('content');
-			$table->timestamps('date');
+			$table->string('content');
+			$table->string('shortContent');
+			$table->string('url_image');
+			$table->timestamps();
 		});
 	}
 
