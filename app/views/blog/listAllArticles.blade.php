@@ -27,12 +27,12 @@
 		@foreach($posts as $post)
 		<li class='post_thumb'>
 			<figure>
-				<img src="{{ $post->url_image_thumb }}" alt="">
+				<a href=""../blog/{{ $post->slug }}""><img src="{{ $post->url_image_thumb }}" alt=""></a>
 				<span class='date'>
 					{{ $post->updated_at}}
 				</span>
 				<figcaption>
-					<h1>{{ $post->title }}</h1>
+					<h1><a href=""../blog/{{ $post->slug }}"">{{ $post->title }}</a></h1>
 					<p>
 						{{ $post->shortContent }}	
 						{{ HTML::link('blog/'.$post->slug, 'Ver mas'); }}	

@@ -56,6 +56,10 @@ body > header > h1 {
     vertical-align: top;
     font-family: 'Lato', Calibri, Arial, sans-serif !important;
 }
+body > header > h1 a, body > header > h1 a:hover{
+    color: white;
+    text-decoration: none;
+}
 .slider {
     position: relative;
     max-width: 840px;
@@ -75,6 +79,7 @@ body > header > h1 {
     width: 60%;
     margin: 0 auto;
     padding: 3em 0 0 0;
+    text-align: left;
 }
 .span7.detail {
     padding: 0.5em 5em;
@@ -204,4 +209,36 @@ figcaption a:hover {
         margin-top: 1em;
     }
 }
-
+/* blog one*/
+.main-content {
+    display: inline-block;
+}
+.main-content > header h1 {
+    text-align: left !important;
+    margin-bottom: 1em;
+}
+.main-content p img{
+    border: 3px solid rgb(9, 9, 9);
+    border-radius: 5px;
+    margin-bottom: 2em;
+}
+.related-content {
+    width: 25%;
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 6.5em;
+}
+.related-content > h2 {
+    background: rgba(104, 85, 45, 0.61);
+    width: 80%;
+    display: inline-block;
+    padding: 3px 5px;
+    text-align: center;
+    color: rgb(2, 1, 1);
+}
+.related-content .articles-list .post_thumb {
+    width: 80% !important;
+}
+#details-left {
+    text-align: center;
+}

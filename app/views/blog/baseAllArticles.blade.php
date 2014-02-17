@@ -26,7 +26,7 @@
 </head>
 <body>
 	<header>
-		<h1> Hello World Peru Blog! </h1>
+		<h1> <a href="../blog/list">Hello World Peru Blog! </a></h1>
 		<img src="../img/logo.png" alt="">
 	</header>
 	<section id="details-left" class="span7 details-lefts">
