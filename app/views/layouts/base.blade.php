@@ -51,7 +51,7 @@
                         <a href="#portfolio">PORTAFOLIO</a>
                     </li>
                     <li class="home">
-                        <a href="#blog">
+                        <a href="../blog/list">
                             <img src="img/logo.png" alt="Home" width="128" height="60">
                         </a>
                     </li>
@@ -60,9 +60,6 @@
                     </li>
                     <li>
                         <a href="#contact">CONTACTANOS</a>
-                    </li>
-                    <li>
-                        <a href="../blog/list">Blog</a>
                     </li>
                 </ul>
             </div>

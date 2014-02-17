@@ -60,6 +60,9 @@ body > header > h1 a, body > header > h1 a:hover{
     color: white;
     text-decoration: none;
 }
+a, a:hover{
+    text-decoration: none;
+}
 .slider {
     position: relative;
     max-width: 840px;
@@ -148,26 +151,27 @@ body > header > h1 a, body > header > h1 a:hover{
 img {
     max-width: 100%;
 }
-figcaption h1 {
+figcaption h1, figcaption h1 a, figcaption h1 a:hover{
     font-size: 24px;
-color: #dc4e2a;
-font-weight: 400;
-letter-spacing: 3px;
-font-family: 'Englebert', Arial, sans-serif;
-line-height: 30px;
-text-shadow: 0 1px 1px rgba(255,255,255,0.6);
-text-align: left;
+    color: #dc4e2a;
+    font-weight: 400;
+    letter-spacing: 3px;
+    font-family: 'Englebert', Arial, sans-serif;
+    line-height: 30px;
+    text-shadow: 0 1px 1px rgba(255,255,255,0.6);
+    text-align: left;
 }
+
 figcaption p {
     text-align: left;
     font-size: 15px;
 }
-figcaption a {
+figcaption p a {
     color: rgb(182, 25, 57);
     display: block;
     font-weight: bold;
 }
-figcaption a:hover {
+figcaption p a:hover {
     color: rgb(182, 25, 37);
     font-weight: bold;
 }
