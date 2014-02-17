@@ -6,18 +6,18 @@
 		<h1>Login</h1>
 
 		<!-- if there are login errors, show them here -->
-		<div class='input-group first-error'>
-			<span class='input-group-addon'><i class='fa fa-envelope'></i></span>
-			{{ Form::text('email', Input::old('email'), array('placeholder' => 'Your email', 'class'=> 'form-control')) }}
-			<div class='msm email'></div>
-		</div>
 		<div class='input-group'>
 			<span class='input-group-addon'><i class='fa fa-user'></i></span>
+			{{ Form::text('email', Input::old('email'), array('placeholder' => 'Your email', 'class'=> 'form-control')) }}
+			<div class='msm email'></div>
+		</div><br>
+		<div class='input-group'>
+			<span class='input-group-addon'><i class='fa fa-key'></i></span>
 			{{ Form::password('password', array('placeholder' => 'Your password', 'class'=> 'form-control')) }}
 			<div class='msm password'></div>
 		</div>
 
-		<p>{{ Form::submit('Submit!') }}</p>
+		<p>{{ Form::submit('Submit!', array('class'=>'btn btn-info')) }}</p>
 	{{ Form::close() }}
 	</section>	
 @stop

@@ -927,6 +927,10 @@ footer .logo {
 
 /* END MEDIA QUERIES */
 /*sidebar*/
+aside{
+    z-index: 1000;
+    position: relative;
+}
 #toque_main_content{
     position: fixed;
           top: 100%;
@@ -988,6 +992,9 @@ footer .logo {
     text-decoration: none;
     color: white;
     opacity: .5;
+}
+.see_info {
+    width: 135px !important;
 }
 [ng\:cloak], [ng-cloak], .ng-cloak {
     display: none !important;

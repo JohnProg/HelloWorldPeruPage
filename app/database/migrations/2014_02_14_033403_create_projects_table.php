@@ -36,3 +36,4 @@ class CreateProjectsTable extends Migration {
 	}
 
 }
+

@@ -17,15 +17,16 @@
         <!-- End Fonts -->
         
         <!-- CSS Files -->
+        @yield('extrastyles')
 		<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
 		<link rel="stylesheet" type="text/css" href="../css/font-awesome.min.css">
 		<link rel="stylesheet" type="text/css" href="../css/style.css">
 		<link rel="stylesheet" type="text/css" href="../css/blog.css">
-		<link rel="stylesheet" href="http://www.webbizarro.com/static/frontend/css/inside.css">
+        
 </head>
 <body>
 	<header>
-		<h1> Hello World Peru Blog! </h1>
+		<h1> <a href="../blog/list">Hello World Peru Blog! </a></h1>
 		<img src="../img/logo.png" alt="">
 	</header>
 	<section id="details-left" class="span7 details-lefts">
@@ -41,7 +42,7 @@
                     <ul class="social list-inline">
                         <li>
                             <div class="fb-like" data-href="https://www.facebook.com/helloworldperu?fref=ts" data-layout="box_count" 
-                            data-action="like" data-show-faces="true" data-share="false"></div>        
+                                data-action="like" data-show-faces="true" data-share="false"></div>        
                         </li>
                         <li>
                             <a href="https://twitter.com/helloworldperu" class="twitter-follow-button" data-show-count="true"
@@ -65,7 +66,7 @@
                             <div class="g-plusone" data-size="tall" data-href="https://plus.google.com/115865913173071701034/posts"></div>
                         </li> 
                         <li>
-                            <div class="g-ytsubscribe" data-channel="HelloWorldPeru" data-layout="default" data-count="default" data-onytevent="onYtEvent"></div>
+                            <div class="g-k" data-channel="HelloWorldPeru" data-layout="default" data-count="default" data-onytevent="onYtEvent"></div>
                         </li> 
                     </ul>
                 </div> 
@@ -97,5 +98,9 @@
         </div>
     
     </footer>
+    @yield('extrascripts')
+    <div id="fb-root"></div>
+    <script src="https://apis.google.com/js/platform.js"></script>
+    <script type="text/javascript" src="../js/social.js"></script>
 </body>
 </html>

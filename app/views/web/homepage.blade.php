@@ -15,6 +15,7 @@
             <li><a class='menu' href="#portfolio"><i class="fa fa-briefcase"></i> <span class="text-menu">PORTFOLIO</span></a></li>
             <li><a class='menu' href="#about"><i class="fa fa-user"></i> <span class="text-menu">ABOUT</span></a></li>
             <li><a class='menu' href="#contact"><i class="fa fa-envelope"></i> <span class="text-menu">CONTACT</span></a></li>
+            <li><a class='menu' href="#contact"><i class="fa fa-desktop"></i> <span class="text-menu">BLOG</span></a></li>
         </ul>
     </nav>
 

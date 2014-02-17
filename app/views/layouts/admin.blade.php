@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Bootstrap -->
     <link rel="stylesheet" type="text/css" href="{{ URL::asset('css/bootstrap.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ URL::asset('css/admin.css') }}">
     @section('extra_styles')
-
+        
     @show
     <![endif]-->
 </head>
