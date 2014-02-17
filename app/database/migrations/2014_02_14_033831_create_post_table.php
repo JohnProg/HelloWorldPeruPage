@@ -23,9 +23,10 @@ class CreatePostTable extends Migration {
       			  ->onDelete('cascade');
 			$table->string('title');
 			$table->string('slug');
-			$table->string('content');
-			$table->string('shortContent');
-			$table->string('url_image');
+			$table->string('content', 7000);
+			$table->string('shortContent', 400);
+			$table->string('url_image_thumb');
+			$table->string('url_image_large');
 			$table->timestamps();
 		});
 	}

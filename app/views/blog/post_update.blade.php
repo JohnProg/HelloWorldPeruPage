@@ -9,14 +9,14 @@
         {{ Form::model($post, array('method' => 'POSt', 'class'=>'form-horizontal', 'role' =>'form')) }}
 
 		<!-- if there are login errors, show them here -->
-		<div class='input-group first-error'>
-			<span class='input-group-addon'><i class='fa fa-envelope'></i></span>
 			{{ Form::text('title', Input::old('title'), array('placeholder' => 'Titulo', 'class'=> 'form-control')) }}
+			{{ Form::text('shortContent', Input::old('shortContent'), array('placeholder' => 'Short content', 'class'=> 'form-control')) }}
+			{{ Form::text('url_image_thumb', Input::old('url_image'), array('placeholder' => 'url image', 'class'=> 'form-control')) }}
+            {{ Form::text('url_image_large', Input::old('url_image'), array('placeholder' => 'url image', 'class'=> 'form-control')) }}
 			{{ Form::textArea('content', Input::old('content'), array('id'=> 'content')) }}
-			<div class='msm email'></div>
-		</div>
+			
 
-		<p>{{ Form::submit('Submit!') }}</p>
+		<p>{{ Form::submit('Submit!', array('class'=>'saveInfoBlog btn btn-info')) }}</p>
 		{{ Form::close() }}
 
 @stop

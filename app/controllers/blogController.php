@@ -15,8 +15,9 @@ class blogController extends BaseController {
 	|
 	*/
 	public function showAllPostsUsers(){
-		$posts = Post::all();
-		return View::make('../blog/listAllArticles')->with('posts', $posts);
+		$posts = Post::all(array('title', 'updated_at', 'shortContent', 'url_image_thumb'));
+		$list = DB::table('Post')->take(2)->get();
+		return View::make('../blog/listAllArticles')->with('posts', $posts)->with('list', $list);
 	}
 
 	public function showOnePostsUsers($slug){
@@ -35,12 +36,18 @@ class blogController extends BaseController {
 		if (Request::isMethod('post')){
 
 			$title = Input::get('title');
+			$shortContent = Input::get('shortContent');
+			$url_image_thumb = Input::get('url_image_thumb');
+			$url_image_large = Input::get('url_image_large');
 			$slug = Str::slug($title);
 			$content = Input::get('content');
 			$user = Auth::user();
 
 			$post = new Post;
 			$post->title = $title;
+			$post->shortContent = $shortContent;
+			$post->url_image_large = $url_image_large;
+			$post->url_image_thumb = $url_image_thumb;
 			$post->user_id = $user->id;
 			$post->slug = $slug;
 			$post->content = $content;
