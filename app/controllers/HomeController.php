@@ -55,6 +55,8 @@ class HomeController extends BaseController {
 	{	
 		if(Request::ajax()){
 			$rules = array(
+				'name' => 'required|min:3',
+				'username' => 'required|min:3',
 				'email'    => 'required|email', // make sure the email is an actual email
 				'password' => 'required|alphaNum|min:3' // password can only be alphanumeric and has to be greater than 3 characters
 			);
@@ -62,26 +64,24 @@ class HomeController extends BaseController {
 			$messages = array(
 				'required'=> 'Campo Obligatorio'
 			);
-			$validator = Validator(Input::all(), $rules, $messages);
+			$validator = Validator::make(Input::all(), $rules, $messages);
 			if($validator->fails()){
 				$data = array('status'=>false,'msg'=>'Ingesa Correctamente');
-				Response::json($data);
+				return Response::json($data);
 			}
 			else{
 				$inputs = Input::all();
 				$inputs['password'] = Hash::make($inputs['password']);
 				$user = User::create($inputs);
                 $data = array('status'=>true,'msg'=>'Registrado Correctamente');
-				Response::json($data);
+				return Response::json($data);
 			}
 		}			
 	}
 
 	public function showDashboard()
 	{		
-		// return View::make('dashboard/dashboard');
-		//return echo 'Bienvenido '. Auth::user()->email . ', su Id es: '.Auth::user()->id;
-		return 'a';
+		return Redirect::to('/admin/blog/posts')->with('msg','Bienvenido!');
     }
 
 

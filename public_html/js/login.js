@@ -11,7 +11,7 @@ $(document).on('ready', function(){
 			},
 			success: function(data){debugger;
 				if(data.status){
-					location.href ='admin/dashboard';
+					location.href ='admin/blog/posts';
 					console.log(data.msg);
 					if(data.msg.password != undefined){
 						$('.password').html(data.msg.password);

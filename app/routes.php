@@ -24,7 +24,7 @@ Route::group($optionsFront, function()
 
     //Rgister
     Route::get('/register', 'HomeController@showRegister');
-
+    Route::post('/register', 'HomeController@doRegister');
     //Test
     Route::get('/test', 'HomeController@showTest');
 
@@ -89,4 +89,14 @@ $optionsApi = array(
 Route::group($optionsApi, function()
 {
     Route::get('/projects', array('as' => 'api_projects', 'uses' => 'Api\ProjectController@getData'));
+});
+
+
+App::error(function(Exception $exception, $code)
+{
+    return Redirect::to('/blog/list');
+});
+App::missing(function($exception)
+{
+    return Redirect::to('/blog/list');
 });

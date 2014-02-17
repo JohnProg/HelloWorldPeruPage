@@ -6,11 +6,11 @@
 		<h1>Login</h1>
 
 		<!-- if there are login errors, show them here -->
-		<div class='input-group first-error'>
+		<div class='input-group'>
 			<span class='input-group-addon'><i class='fa fa-envelope'></i></span>
 			{{ Form::text('email', Input::old('email'), array('placeholder' => 'Your email', 'class'=> 'form-control')) }}
 			<div class='msm email'></div>
-		</div>
+		</div><br>
 		<div class='input-group'>
 			<span class='input-group-addon'><i class='fa fa-user'></i></span>
 			{{ Form::password('password', array('placeholder' => 'Your password', 'class'=> 'form-control')) }}

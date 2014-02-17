@@ -4,18 +4,27 @@
 	<section class="auth">		
 		{{ Form::open(array('url' => 'register', 'class'=>'ajax')) }}
 		<h1>Register</h1>
-
+		
+		<div class='input-group'>
+			<span class='input-group-addon'><i class='fa fa-user'></i></span>
+			{{ Form::text('name', Input::old('name'), array('placeholder'=>'', 'class'=> 'form-control')) }}
+		</div><br>
+		<div class='input-group'>
+			<span class='input-group-addon'><i class='fa fa-user'></i></span>
+			{{ Form::text('username', Input::old('username'), array('placeholder'=>'', 'class'=> 'form-control')) }}
+		</div><br>
 		<div class='input-group first-error'>
 			<span class='input-group-addon'><i class='fa fa-envelope'></i></span>
-			{{ Form::text('email', Input::old('email'), array('placeholder' => 'john_js@agmail.com', 'class'=> 'form-control')) }}
+			{{ Form::text('email', Input::old('email'), array('placeholder' => '', 'class'=> 'form-control')) }}
 		</div>
-
+<br>
 		<div class='input-group'>
 			<span class='input-group-addon'><i class='fa fa-user'></i></span>
 			{{ Form::password('password', array('placeholder'=>'******', 'class'=> 'form-control')) }}
 		</div>
 
-		<p>{{ Form::submit('Submit!') }}</p>
+
+		<p>{{ Form::submit('Submit!', array('class'=>'btn btn-info')) }}</p>
 	{{ Form::close() }}
 	</section>	
 @stop
