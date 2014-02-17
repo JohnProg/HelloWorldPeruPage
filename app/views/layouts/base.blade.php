@@ -61,6 +61,9 @@
                     <li>
                         <a href="#contact">CONTACTANOS</a>
                     </li>
+                    <li>
+                        <a href="../blog/list">Blog</a>
+                    </li>
                 </ul>
             </div>
 

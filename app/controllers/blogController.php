@@ -15,7 +15,7 @@ class blogController extends BaseController {
 	|
 	*/
 	public function showAllPostsUsers(){
-		$posts = Post::all(array('title', 'updated_at', 'shortContent', 'url_image_thumb'));
+		$posts = Post::all(array('title', 'updated_at', 'shortContent', 'url_image_thumb', 'slug'));
 		$list = DB::table('Post')->take(5)->get();
 		return View::make('../blog/listAllArticles')->with('posts', $posts)->with('list', $list);
 	}
