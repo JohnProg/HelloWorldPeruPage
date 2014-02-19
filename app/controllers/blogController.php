@@ -15,14 +15,14 @@ class blogController extends BaseController {
 	|
 	*/
 	public function showAllPostsUsers(){
-		$posts = Post::all(array('title', 'updated_at', 'shortContent', 'url_image_thumb', 'slug'));
-		$list = DB::table('Post')->take(5)->get();
+		$posts = Post::all();
+		$list = Post::all()->take(5);
 		return View::make('../blog/listAllArticles')->with('posts', $posts)->with('list', $list);
 	}
 
 	public function showOnePostsUsers($slug){
 		$post = Post::where('slug', $slug)->first();
-		$list = DB::table('Post')->take(3)->get();
+		$list = Post::all()->take(3);
 		return View::make('blog.listOneArticle')->with('post', $post)->with('list', $list);
 	}
 
@@ -30,16 +30,27 @@ class blogController extends BaseController {
 	{	
 		$list = Post::paginate(5);
         return View::make('blog.listarticles')->with('posts',$list);
-
-//
-//        $list = Post::all();
-//        return Response::json($list->toArray());
 	}
 
 	public function createPost(){
 
 		if (Request::isMethod('post')){
 
+            $rules = array(
+                'title'       => 'required',
+                'shortContent'   => 'required',
+                'image' => 'required|image|max:3000',
+            );
+            $validator = Validator::make(Input::all(), $rules);
+
+            // process the login
+            if ($validator->fails()) {
+                Session::flash('message', array(
+                    'message'=>'No se ha podido crear el proyecto',
+                    'option' =>'warning'
+                ));
+                return Redirect::back()->withInput()->withErrors($validator);
+            }
 			$title = Input::get('title');
 			$shortContent = Input::get('shortContent');
 			$slug = Str::slug($title);

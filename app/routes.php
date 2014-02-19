@@ -23,8 +23,8 @@ Route::group($optionsFront, function()
     Route::get('/logout', 'HomeController@doLogout');
 
     //Rgister
-    Route::get('/register', 'HomeController@showRegister');
-    Route::post('/register', 'HomeController@doRegister');
+//    Route::get('/register', 'HomeController@showRegister');
+//    Route::post('/register', 'HomeController@doRegister');
     //Test
     Route::get('/test', 'HomeController@showTest');
 

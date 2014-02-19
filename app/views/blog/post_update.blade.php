@@ -6,13 +6,20 @@
 </div>
 
     <div class="tab-pane active" id="information">
-        {{ Form::model($post, array('method' => 'POSt', 'class'=>'form-horizontal', 'role' =>'form')) }}
-
-		<!-- if there are login errors, show them here -->
+        {{ Form::model($post, array('method' => 'POSt','files' => true, 'class'=>'form-horizontal', 'role' =>'form')) }}
+        <div class="form-group">
+            {{ Form::label('title', 'Titulo', array('class'=>'col-sm-2 control-label')) }}
+            <div class="col-sm-10">
 			{{ Form::text('title', Input::old('title'), array('placeholder' => 'Titulo', 'class'=> 'form-control')) }}
-			{{ Form::text('shortContent', Input::old('shortContent'), array('placeholder' => 'Short content', 'class'=> 'form-control')) }}
-			{{ Form::text('url_image_thumb', Input::old('url_image'), array('placeholder' => 'url image', 'class'=> 'form-control')) }}
-            {{ Form::text('url_image_large', Input::old('url_image'), array('placeholder' => 'url image', 'class'=> 'form-control')) }}
+            </div>
+        </div>
+        <div class="form-group">
+            {{ Form::label('shortContent', 'Introduccion', array('class'=>'col-sm-2 control-label')) }}
+            <div class="col-sm-10">
+                {{ Form::text('shortContent', Input::old('shortContent'), array('placeholder' => 'Short content', 'class'=> 'form-control')) }}
+            </div>
+        </div>
+    </div>
 			{{ Form::textArea('content', Input::old('content'), array('id'=> 'content')) }}
 			
 
@@ -23,8 +30,8 @@
 
 @section('extra_scripts')
 	<!-- Scripts Section -->
-    <script src="/js/jquery.1.10.1.js"></script>
-    <script src="/packages/ckeditor/ckeditor.js"></script>
+    <script src="{{ URL::asset('js/jquery.1.10.1.js') }}"></script>
+    <script src="{{ URL::asset('packages/ckeditor/ckeditor.js') }}"></script>
     <script type="text/javascript">
     	CKEDITOR.replace( 'content' );
     </script>

@@ -4,7 +4,6 @@
 <div class="page-header">
     <h1>Crear Post</h1>
 </div>
-
     <div class="tab-pane active" id="information">
         {{ Form::open(array('method' => 'POST','files' => true, 'class'=>'form-horizontal')) }}
         <div class="form-group">
@@ -35,8 +34,8 @@
 
 @section('extra_scripts')
 	<!-- Scripts Section -->
-    <script src="/js/jquery.1.10.1.js"></script>
-    <script src="/packages/ckeditor/ckeditor.js"></script>
+    <script src="{{ URL::asset('js/jquery.1.10.1.js') }}"></script>
+    <script src="{{ URL::asset('packages/ckeditor/ckeditor.js') }}"></script>
     <script type="text/javascript">
     	CKEDITOR.replace( 'content' );
     </script>

@@ -6,6 +6,11 @@
 		<header>
 			<h1>{{ $post->title }}</h1>
 		</header>
+
+        <div>
+            <img src="{{ $post->image_thumbs }}" alt="" style="margin: 0 auto;display:block;">
+        </div>
+        <p></p>
 		{{ $post->content }}
 	</section>
 	<aside class='related-content'>
@@ -14,7 +19,7 @@
 			@foreach($list as $lista)
 			<li class='post_thumb'>
 				<figure>
-					<a href="../blog/{{ $lista->slug }}"><img src="{{ $lista->url_image_thumb }}" target="_blank" alt=""></a>
+					<a href="../blog/{{ $lista->slug }}"><img src="{{ $lista->image_thumbs }}" target="_blank" alt=""></a>
 					<span class='date'>
 						{{ $lista->updated_at}}
 					</span>

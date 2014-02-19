@@ -6,9 +6,9 @@
 @section('content')
 	<div class="slider">
 		<ul id="sb-slider" class="sb-slider">
-			@foreach($list as $listaUnit)
+			@foreach($posts as $listaUnit)
 			<li>
-				<a href="{{$listaUnit->slug}}" target="_blank"><img src="{{ $listaUnit->url_image_large }}" alt=""/></a>
+				<a href="{{$listaUnit->slug}}" target="_blank"><img src="{{ $listaUnit->image_large }}" style="width:633px;height: 350px;" alt=""/></a>
 				<div class="sb-description">
 					<h3>{{ $listaUnit->title }}</h3>
 					<p>{{ $listaUnit->shortContent }}</p>
@@ -27,7 +27,7 @@
 		@foreach($posts as $post)
 		<li class='post_thumb'>
 			<figure>
-				<a href="../blog/{{ $post->slug }}" target="_blank"><img src="{{ $post->url_image_thumb }}" alt=""></a>
+				<a href="../blog/{{ $post->slug }}" target="_blank"><img src="{{ $post->image_thumbs }}" alt=""></a>
 				<span class='date'>
 					{{ $post->updated_at}}
 				</span>

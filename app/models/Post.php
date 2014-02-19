@@ -2,25 +2,39 @@
 
 class Post extends Eloquent {
 	protected $table = 'posts';
+    protected $appends = array('image_large', 'image_thumbs');
 	public $timestamps = false;
 
-    public function toArray()
+    public function getImageLargeAttribute()
     {
-        $array = parent::toArray();
-        $array['url_image_large'] = $this->get_main_image()[0];
-        $array['url_image_thumb'] = $this->get_main_image()[1];
-        return $array;
+        $photo = $this->get_main_image();
+        $file_photo = $photo[0];
+        return $file_photo;
     }
-
     public function get_main_image()
     {
         $photo = Photo::where('object_id', '=', $this->id)
             ->where('model', '=','posts')->first();
         if($photo == null)
         {
-            return array('Imagen por defecto', 'imagen por defecto');
+            return array('Imagen por defecto', 0);
         }
-        return array($photo->file, $photo->photos_details()->get()->toArray());
+        return array($photo->file, $photo->id);
+    }
+
+    public function getImageThumbsAttribute()
+    {
+        $photo = $this->get_main_image();
+        if($photo[1] > 0)
+        {
+            try {
+                $thumbnail = Photo::find($photo[1])->photos_details()->get()->toArray()[0];
+                return $thumbnail['file'];
+            } catch (Exception $e) {
+                return 'Imagen por defecto';
+            }
+        }
+        return 'Imagen por defecto';
     }
 
 
