@@ -24,17 +24,21 @@ class Post extends Eloquent {
 
     public function getImageThumbsAttribute()
     {
-        $photo = $this->get_main_image();
-        if($photo[1] > 0)
-        {
-            try {
-                $thumbnail = Photo::find($photo[1])->photos_details()->get()->toArray()[0];
-                return $thumbnail['file'];
-            } catch (Exception $e) {
-                return 'Imagen por defecto';
+        try{
+            $photo = $this->get_main_image();
+            if($photo[1] > 0)
+            {
+                try {
+                    $thumbnail = Photo::find($photo[1])->photos_details()->get()->toArray()[0];
+                    return $thumbnail['file'];
+                } catch (Exception $e) {
+                    return 'Imagen por defecto';
+                }
             }
+            return 'Imagen por defecto';
+        } catch (Exception $e) {
+            return 'Imagen por defecto';
         }
-        return 'Imagen por defecto';
     }
 
 
