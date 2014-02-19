@@ -28,6 +28,7 @@ class Post extends Eloquent {
             $photo = $this->get_main_image();
             if($photo[1] > 0)
             {
+                return $photo[1];
                 try {
                     $thumbnail = Photo::find($photo[1])->photos_details()->get()->toArray()[0];
                     return $thumbnail['file'];
