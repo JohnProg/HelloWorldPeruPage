@@ -246,3 +246,7 @@ figcaption p a:hover {
 #details-left {
     text-align: center;
 }
+
+#disqus_thread {
+    margin-top: 5em;
+}
