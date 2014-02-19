@@ -8,7 +8,7 @@
 		<ul id="sb-slider" class="sb-slider">
 			@foreach($posts as $listaUnit)
 			<li>
-				<a href="{{$listaUnit->slug}}" target="_blank"><img src="{{ $listaUnit->image_large }}" style="width:633px;height: 350px;" alt=""/></a>
+				<a href="{{$listaUnit->slug}}" target="_blank"><img src="{{ $listaUnit->image_large }}" style="width:740px;height: 350px;" alt=""/></a>
 				<div class="sb-description">
 					<h3>{{ $listaUnit->title }}</h3>
 					<p>{{ $listaUnit->shortContent }}</p>

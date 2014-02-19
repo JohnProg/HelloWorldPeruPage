@@ -31,7 +31,6 @@ class Post extends Eloquent {
                 try {
                     $thumbnail = Photo::find($photo[1])->photos_details()->get()->toArray();
                     return $thumbnail[0]['file'];
-//                    return $thumbnail['file'];
                 } catch (Exception $e) {
                     return 'Imagen por defecto';
                 }
