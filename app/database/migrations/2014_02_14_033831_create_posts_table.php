@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreatePostTable extends Migration {
+class CreatePostsTable extends Migration {
 
 	/**
 	 * Run the migrations.
@@ -12,7 +12,7 @@ class CreatePostTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('post', function(Blueprint $table)
+		Schema::create('posts', function(Blueprint $table)
 		{
 			$table->engine = 'InnoDB';
 
@@ -25,8 +25,6 @@ class CreatePostTable extends Migration {
 			$table->string('slug', 800);
 			$table->string('content', 7000);
 			$table->string('shortContent', 300);
-			$table->string('url_image_thumb');
-			$table->string('url_image_large');
 			$table->timestamps();
 		});
 	}
@@ -38,9 +36,9 @@ class CreatePostTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('post', function(Blueprint $table)
+		Schema::drop('posts', function(Blueprint $table)
         {
-            Schema:drop('post');
+            Schema:drop('posts');
         });
 	}
 

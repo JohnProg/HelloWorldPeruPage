@@ -23,13 +23,17 @@ class blogController extends BaseController {
 	public function showOnePostsUsers($slug){
 		$post = Post::where('slug', $slug)->first();
 		$list = DB::table('Post')->take(3)->get();
-		return View::make('../blog.listOneArticle')->with('post', $post)->with('list', $list);
+		return View::make('blog.listOneArticle')->with('post', $post)->with('list', $list);
 	}
 
 	public function showAllPosts()
 	{	
 		$list = Post::paginate(5);
-        return View::make('../blog.listarticles')->with('posts',$list);
+        return View::make('blog.listarticles')->with('posts',$list);
+
+//
+//        $list = Post::all();
+//        return Response::json($list->toArray());
 	}
 
 	public function createPost(){
@@ -38,8 +42,6 @@ class blogController extends BaseController {
 
 			$title = Input::get('title');
 			$shortContent = Input::get('shortContent');
-			$url_image_thumb = Input::get('url_image_thumb');
-			$url_image_large = Input::get('url_image_large');
 			$slug = Str::slug($title);
 			$content = Input::get('content');
 			$user = Auth::user();
@@ -47,12 +49,19 @@ class blogController extends BaseController {
 			$post = new Post;
 			$post->title = $title;
 			$post->shortContent = $shortContent;
-			$post->url_image_large = $url_image_large;
-			$post->url_image_thumb = $url_image_thumb;
 			$post->user_id = $user->id;
 			$post->slug = $slug;
 			$post->content = $content;
 			$post->save();
+
+
+            $file = Input::file('image');
+            $photo = new Photo;
+            $photo->model = 'posts';
+            $photo->object_id = $post->id;
+            $photo->save();
+            $photo->upload_image($file);
+
 			return Redirect::route('admin_posts');
 		}else{
 			return View::make('../blog.createarticle');		

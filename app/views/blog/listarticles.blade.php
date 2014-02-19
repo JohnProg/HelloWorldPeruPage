@@ -14,6 +14,7 @@
     <table class="table table-hover">
         <thead>
         <tr>
+            <th>Image</th>
             <th>Titulo</th>
             <th>Opciones</th>
         </tr>
@@ -21,6 +22,7 @@
         <tbody>
         @foreach($posts as $post)
         <tr>
+            <td>{{ $post->url_image_thumb }}</td>
             <td>{{ $post->title }}</td>
             <td>
                 <a href="{{ URL::route('post_delete', $post->id ); }}">Eliminar</a> |

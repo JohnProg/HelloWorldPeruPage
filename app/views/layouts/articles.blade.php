@@ -10,7 +10,7 @@
 		<title>Hello World Peru</title>
 		<meta name="description" content="">
 		<meta name="keywords" content="">
-		<link rel="shortcut icon" href="../img/favicon.ico">
+		<link rel="shortcut icon" href="{{ URL::asset('img/favicon.ico') }}">
         
         <!-- Fonts --> 
         <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
@@ -18,16 +18,16 @@
         
         <!-- CSS Files -->
         @yield('extrastyles')
-		<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
-		<link rel="stylesheet" type="text/css" href="../css/font-awesome.min.css">
-		<link rel="stylesheet" type="text/css" href="../css/style.css">
-		<link rel="stylesheet" type="text/css" href="../css/blog.css">
+		<link rel="stylesheet" type="text/css" href="{{ URL::asset('css/bootstrap.min.css') }}">
+		<link rel="stylesheet" type="text/css" href="{{ URL::asset('css/font-awesome.min.css') }}">
+		<link rel="stylesheet" type="text/css" href="{{ URL::asset('css/style.css') }}">
+		<link rel="stylesheet" type="text/css" href="{{ URL::asset('css/blog.css') }}">
         
 </head>
 <body>
 	<header>
 		<h1> <a href="../blog/list">Hello World Peru Blog! </a></h1>
-		<img src="../img/logo.png" alt="">
+        <a href="{{ URL::route('home'); }}"><img src="{{ URL::asset('img/logo.png') }}" alt=""></a>
 	</header>
 	<section id="details-left" class="span7 details-lefts">
 		@yield('content')

@@ -1,7 +1,7 @@
-@extends('blog.baseAllArticles')
+@extends('layouts.articles')
 @section('extrastyles')
-	<link rel="stylesheet" type="text/css" href="../css/slicebox.css" />
-	<link rel="stylesheet" type="text/css" href="../css/custom.css" />
+	<link rel="stylesheet" type="text/css" href="{{ URL::asset('css/slicebox.css') }}" />
+	<link rel="stylesheet" type="text/css" href="{{ URL::asset('css/custom.css') }}" />
 @stop
 @section('content')
 	<div class="slider">
@@ -45,8 +45,8 @@
 	</ul>
 @stop
 @section('extrascripts')
-	<script src="../js/jquery.1.10.1.js"></script>
-	<script src='../js/modernizr.custom.js'></script>
-	<script type="text/javascript" src="../js/jquery.slicebox.js"></script>
-	<script type="text/javascript" src='../js/slider.js'></script>
+	<script src="{{ URL::asset('js/jquery.1.10.1.js') }} "></script>
+	<script src='{{ URL::asset('js/modernizr.custom.js') }} '></script>
+	<script type="text/javascript" src="{{ URL::asset('js/jquery.slicebox.js') }}"></script>
+	<script type="text/javascript" src='{{ URL::asset('js/slider.js') }}'></script>
 @stop

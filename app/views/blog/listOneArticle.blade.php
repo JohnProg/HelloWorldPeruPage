@@ -1,12 +1,12 @@
-@extends('blog.baseAllArticles')
+@extends('layouts.articles')
 
 @section('content')
-	
-	<section class='main-content'>	
+
+	<section class='main-content'>
 		<header>
 			<h1>{{ $post->title }}</h1>
 		</header>
-		{{ $post->content }}	
+		{{ $post->content }}
 	</section>
 	<aside class='related-content'>
 		<h2>Post Relacionados</h2>
@@ -21,14 +21,14 @@
 					<figcaption>
 						<h1><a href="../blog/{{ $lista->slug }}" target="_blank">{{ $lista->title }}</a></h1>
 						<p>
-							{{ $lista->shortContent }}	
-							{{ HTML::link('blog/'.$lista->slug, 'Ver mas'); }}	
+							{{ $lista->shortContent }}
+							{{ HTML::link('blog/'.$lista->slug, 'Ver mas'); }}
 						</p>
-						
+
 					</figcaption>
 				</figure>
 			</li>
-			@endforeach	
+			@endforeach
 		</ul>
 	</aside>
 @stop
