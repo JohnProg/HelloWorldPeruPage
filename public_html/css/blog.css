@@ -31,7 +31,7 @@ html{
 }
 body{
     font-family: 'Lato', Calibri, Arial, sans-serif !important;
-    background: #f6b93c url(../img/pattern-2.png);
+    background: url(../img/pattern-2.png);
     font-weight: 400;
     font-size: 15px;
     color: #333;
