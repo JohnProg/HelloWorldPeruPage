@@ -6,7 +6,15 @@
 </div>
 
     <div class="tab-pane active" id="information">
-        {{ Form::model($post, array('method' => 'POSt','files' => true, 'class'=>'form-horizontal', 'role' =>'form')) }}
+        {{ Form::model($post, array('method' => 'post', 'files' => true, 'class'=>'form-horizontal', 'role' =>'form')) }}
+        <div class="form-group">
+            {{ Form::label('img', 'Imagen', array('class'=>'col-sm-2 control-label')) }}
+            <div class="col-sm-10" style="text-align: left;">
+                <img src="{{ $photo[0]['file'] }}" alt="" style="width: 120px; text-align: left"/>
+                {{ Form::file('image', Input::old('image'), array('placeholder' => 'Short content', 'class'=> 'form-control')) }}
+
+            </div>
+        </div>
         <div class="form-group">
             {{ Form::label('title', 'Titulo', array('class'=>'col-sm-2 control-label')) }}
             <div class="col-sm-10">

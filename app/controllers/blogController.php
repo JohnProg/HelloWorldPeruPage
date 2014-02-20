@@ -84,6 +84,24 @@ class blogController extends BaseController {
 		$post = Post::find($id);
 
 		if (Request::isMethod('post')){
+
+            $rules = array(
+                'title'       => 'required',
+                'shortContent'   => 'required',
+                'image' => 'image|max:3000',
+            );
+            $validator = Validator::make(Input::all(), $rules);
+
+            // process the login
+            if ($validator->fails()) {
+                Session::flash('message', array(
+                    'message'=>'No se ha podido crear el proyecto',
+                    'option' =>'warning'
+                ));
+                return Redirect::back()->withInput()->withErrors($validator);
+            }
+
+
 			$title = Input::get('title');
 			$slug = Str::slug($title);
 			$content = Input::get('content');
@@ -94,10 +112,28 @@ class blogController extends BaseController {
 			$post->slug = $slug;
 			$post->content = $content;
 			$post->save();
+
+
+            $file = Input::file('image');
+
+            if($file != null){
+                $photo = Photo::where('object_id','=',$post->id)->where('model','=','posts')->take(1)->get();
+                $photo = $photo[0];
+                $photo->delete();
+                File::delete($photo['file']);
+
+                $photo = new Photo;
+                $photo->model = 'posts';
+                $photo->object_id = $post->id;
+                $photo->save();
+                $photo->upload_image($file);
+            }
+
+
 			return Redirect::route('admin_posts');
 		}else{
-			return View::make('../blog.post_update')
-            	->with('post', $post);
+            $photo = Photo::where('object_id','=',$post->id)->where('model','=','posts')->take(1)->get();
+            return View::make('../blog.post_update', array('post' => $post, 'photo' => $photo));
 		}
     }
 
