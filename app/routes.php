@@ -91,12 +91,13 @@ Route::group($optionsApi, function()
     Route::get('/projects', array('as' => 'api_projects', 'uses' => 'Api\ProjectController@getData'));
 });
 
-
-App::error(function(Exception $exception, $code)
-{
-    return View::make('500');
-});
-App::missing(function($exception)
-{
-    return View::make('404');
-});
+if(Config::get('app.debug') == false){
+    App::error(function(Exception $exception, $code)
+    {
+        return View::make('500');
+    });
+    App::missing(function($exception)
+    {
+        return View::make('404');
+    });
+}
