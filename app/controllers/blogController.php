@@ -15,9 +15,9 @@ class blogController extends BaseController {
 	|
 	*/
 	public function showAllPostsUsers(){
-		$posts = Post::all();
+		$posts = Post::paginate(9);
 		$list = Post::all()->take(5);
-		return View::make('../blog/listAllArticles')->with('posts', $posts)->with('list', $list);
+		return View::make('blog/listAllArticles')->with('posts', $posts)->with('list', $list);
 	}
 
 	public function showOnePostsUsers($slug){
@@ -63,6 +63,8 @@ class blogController extends BaseController {
 			$post->user_id = $user->id;
 			$post->slug = $slug;
 			$post->content = $content;
+			$post->created_at = new DateTime();
+			$post->updated_at = new DateTime();
 			$post->save();
 
 

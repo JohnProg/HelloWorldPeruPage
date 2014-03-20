@@ -43,6 +43,7 @@
 		</li>
 		@endforeach	
 	</ul>
+	{{ $posts->links(); }}
 @stop
 @section('extrascripts')
 	<script src="{{ URL::asset('js/jquery.1.10.1.js') }} "></script>
